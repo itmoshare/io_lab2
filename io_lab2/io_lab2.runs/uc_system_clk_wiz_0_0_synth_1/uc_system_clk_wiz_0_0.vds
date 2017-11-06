@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Nov  6 15:34:55 2017
+# Process ID: 11268
+# Current directory: C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.runs/uc_system_clk_wiz_0_0_synth_1
+# Command line: vivado.exe -log uc_system_clk_wiz_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uc_system_clk_wiz_0_0.tcl
+# Log file: C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.runs/uc_system_clk_wiz_0_0_synth_1/uc_system_clk_wiz_0_0.vds
+# Journal file: C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.runs/uc_system_clk_wiz_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source uc_system_clk_wiz_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 318.797 ; gain = 80.047
+INFO: [Synth 8-638] synthesizing module 'uc_system_clk_wiz_0_0' [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.v:70]
+INFO: [Synth 8-638] synthesizing module 'uc_system_clk_wiz_0_0_clk_wiz' [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_clk_wiz.v:68]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:14470]
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:14470]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20759]
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (2#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20759]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (3#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'uc_system_clk_wiz_0_0_clk_wiz' (4#1) [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_clk_wiz.v:68]
+INFO: [Synth 8-256] done synthesizing module 'uc_system_clk_wiz_0_0' (5#1) [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.v:70]
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 358.875 ; gain = 120.125
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 358.875 ; gain = 120.125
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.331 . Memory (MB): peak = 582.055 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 582.055 ; gain = 343.305
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 582.055 ; gain = 343.305
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 582.055 ; gain = 343.305
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 582.055 ; gain = 343.305
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 582.055 ; gain = 343.305
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 604.141 ; gain = 365.391
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 604.141 ; gain = 365.391
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 614.277 ; gain = 375.527
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 614.277 ; gain = 375.527
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 614.277 ; gain = 375.527
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 614.277 ; gain = 375.527
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 614.277 ; gain = 375.527
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 614.277 ; gain = 375.527
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 614.277 ; gain = 375.527
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     2|
+|2     |MMCME2_ADV |     1|
+|3     |IBUF       |     1|
++------+-----------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 614.277 ; gain = 375.527
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 627.805 ; gain = 390.680

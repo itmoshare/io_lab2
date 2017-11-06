@@ -1,0 +1,16 @@
+17:11:06 INFO  : Registering command handlers for SDK TCF services
+17:11:07 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Laptop\Documents\projects\io_lab2\io_lab2\io_lab2.sdk\temp_xsdb_launch_script.tcl
+17:11:12 INFO  : XSCT server has started successfully.
+17:11:12 INFO  : Successfully done setting XSCT server connection channel  
+17:11:20 INFO  : Successfully done setting SDK workspace  
+17:11:20 INFO  : Processing command line option -hwspec C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf.
+17:40:19 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1509979214922,  Project:1509972300113
+17:40:19 INFO  : Project uc_system_wrapper_hw_platform_0's source hardware specification located at C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+17:40:33 INFO  : Project uc_system_wrapper_hw_platform_0's source hardware specification location will not be monitored anymore.
+17:41:22 INFO  : Registering command handlers for SDK TCF services
+17:41:23 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Laptop\Documents\projects\io_lab2\io_lab2\io_lab2.sdk\temp_xsdb_launch_script.tcl
+17:41:27 INFO  : XSCT server has started successfully.
+17:41:34 INFO  : Processing command line option -hwspec C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf.
+17:41:34 INFO  : Successfully done setting XSCT server connection channel  
+17:41:35 INFO  : Successfully done setting SDK workspace  
