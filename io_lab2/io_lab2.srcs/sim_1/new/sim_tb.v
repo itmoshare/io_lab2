@@ -43,12 +43,16 @@ module sim_tb;
         
         #6000;
         capturetrig0 = 1;
-        #200;
+        # 5000;
         capturetrig0 = 0;
-        #2000;
+        # 3000;
         capturetrig0 = 1;
-        #200;
-        capturetrig0 = 0;
+//        #200;
+//        capturetrig0 = 0;
+//        #2000;
+//        capturetrig0 = 1;
+//        #200;
+//        capturetrig0 = 0;
      end
      
      always #5 clk = ~clk;

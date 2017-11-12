@@ -14,3 +14,4 @@
 17:41:34 INFO  : Processing command line option -hwspec C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf.
 17:41:34 INFO  : Successfully done setting XSCT server connection channel  
 17:41:35 INFO  : Successfully done setting SDK workspace  
+19:11:06 INFO  : CPU Number not found for processor microblaze_core, defaulting to 0 
