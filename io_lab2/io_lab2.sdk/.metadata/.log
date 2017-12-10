@@ -3393,3 +3393,6 @@ Read:      0 - No interrupt has occurred      1 - Interrupt has occurred  Write:
 
 !ENTRY com.xilinx.sdk.utils 0 0 2017-11-12 19:11:26.479
 !MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null, ]. Thread: Worker-67
+
+!ENTRY com.xilinx.sdk.utils 1 0 2017-12-07 09:22:18.169
+!MESSAGE Executed Webtalk command

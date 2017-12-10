@@ -43,9 +43,9 @@ module sim_tb;
         
         #6000;
         capturetrig0 = 1;
-        # 5000;
+        #3000;
         capturetrig0 = 0;
-        # 3000;
+        # 3003;
         capturetrig0 = 1;
 //        #200;
 //        capturetrig0 = 0;
