@@ -2,11 +2,11 @@
 # Webtalk v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # 
-# Start of session at: Thu Dec  7 09:22:32 2017
-# Process ID: 14048
-# Current directory: C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.sdk/webtalk
+# Start of session at: Sun Dec 10 13:51:00 2017
+# Process ID: 17072
+# Current directory: D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/webtalk
 # Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
-# Log file: C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.sdk/webtalk/webtalk.log
-# Journal file: C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.sdk/webtalk\webtalk.jou
+# Log file: D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/webtalk/webtalk.log
+# Journal file: D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/webtalk\webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl

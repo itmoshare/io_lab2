@@ -42,11 +42,11 @@ vmap axi_data_fifo_v2_1_12 activehdl/axi_data_fifo_v2_1_12
 vmap axi_crossbar_v2_1_14 activehdl/axi_crossbar_v2_1_14
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" \
-"C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-"C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+"D:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+"D:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -93 \
-"C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_VCOMP.vhd" \
+"D:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vcom -work microblaze_v10_0_3 -93 \
 "../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/fe06/hdl/microblaze_v10_0_vh_rfs.vhd" \

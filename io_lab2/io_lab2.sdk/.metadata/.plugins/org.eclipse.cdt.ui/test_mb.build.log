@@ -1,6 +1,21 @@
-19:11:03 **** Incremental Build of configuration Debug for project test_mb ****
+22:53:13 **** Incremental Build of configuration Debug for project test_mb ****
 make all 
-make: Цель `all' не требует выполнения команд.
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test_mb_bsp/microblaze_core/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: test_mb.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_mb_bsp/microblaze_core/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_mb.elf"  ./src/main.o   
+'Finished building target: test_mb.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test_mb.elf  |tee "test_mb.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2252	    268	   3120	   5640	   1608	test_mb.elf
+'Finished building: test_mb.elf.size'
+' '
 
-19:11:04 Build Finished (took 319ms)
+22:53:17 Build Finished (took 4s.415ms)
 

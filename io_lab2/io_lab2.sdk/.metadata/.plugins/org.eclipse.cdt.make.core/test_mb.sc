@@ -2,6 +2,9 @@
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="xilinx.gnu.mb.exe.debug.105182133;xilinx.gnu.mb.exe.debug.105182133.">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="d:\xilinx\sdk\2017.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/include"/>
+<includePath path="d:\xilinx\sdk\2017.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/include-fixed"/>
+<includePath path="d:\xilinx\sdk\2017.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/include"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/include"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/include-fixed"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/include"/>
@@ -444,6 +447,9 @@
 </instance>
 <instance id="xilinx.gnu.mb.exe.debug.105182133;xilinx.gnu.mb.exe.debug.105182133.;xilinx.gnu.mb.c.toolchain.compiler.debug.505971877;xilinx.gnu.compiler.input.940663134">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="d:\xilinx\sdk\2017.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/include"/>
+<includePath path="d:\xilinx\sdk\2017.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/include-fixed"/>
+<includePath path="d:\xilinx\sdk\2017.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/include"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/include"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/include-fixed"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/include"/>

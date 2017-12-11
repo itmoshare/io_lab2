@@ -1,37 +1,71 @@
 {
    guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
+preplace port uart_rtl -pg 1 -y -80 -defaultsOSRD
 preplace port capturetrig0 -pg 1 -y -240 -defaultsOSRD
 preplace port reset_rtl -pg 1 -y -310 -defaultsOSRD
-preplace port gpio_rtl -pg 1 -y 550 -defaultsOSRD
-preplace port pwm0 -pg 1 -y 390 -defaultsOSRD
-preplace port generateout0 -pg 1 -y 350 -defaultsOSRD
+preplace port gpio_rtl -pg 1 -y 60 -defaultsOSRD
+preplace port pwm0 -pg 1 -y -250 -defaultsOSRD
+preplace port generateout0 -pg 1 -y -290 -defaultsOSRD
 preplace port clock_rtl -pg 1 -y -290 -defaultsOSRD
-preplace inst clk_wiz -pg 1 -lvl 1 -y -300 -defaultsOSRD
-preplace inst axi_interconnect -pg 1 -lvl 1 -y 240 -defaultsOSRD
-preplace inst microblaze_core -pg 1 -lvl 1 -y 20 -defaultsOSRD
-preplace inst rst_clk_100M -pg 1 -lvl 1 -y -140 -defaultsOSRD
-preplace inst axi_timer -pg 1 -lvl 2 -y 380 -defaultsOSRD
-preplace inst microblaze_core_local_memory -pg 1 -lvl 2 -y 80 -defaultsOSRD
-preplace inst axi_gpio -pg 1 -lvl 2 -y 550 -defaultsOSRD
-preplace netloc clk_wiz_locked 1 0 2 10 -380 530
-preplace netloc axi_interconnect_M01_AXI 1 1 1 540
-preplace netloc capturetrig0_1 1 0 2 NJ -240 580
-preplace netloc axi_gpio_GPIO 1 2 1 NJ
-preplace netloc axi_timer_pwm0 1 2 1 N
-preplace netloc rst_clk_100M_interconnect_aresetn 1 0 2 0 -230 530
-preplace netloc rst_clk_100M_peripheral_aresetn 1 0 2 10 380 550
-preplace netloc microblaze_core_Clk 1 0 2 -20 -360 570
-preplace netloc microblaze_core_ilmb_1 1 1 1 560J
-preplace netloc rst_clk_100M_bus_struct_reset 1 1 1 600J
-preplace netloc microblaze_core_M_AXI_DP 1 0 2 10 100 530
-preplace netloc axi_timer_generateout0 1 2 1 N
-preplace netloc clock_rtl_1 1 0 1 NJ
-preplace netloc rst_clk_100M_mb_reset 1 0 2 -10 -400 550
-preplace netloc axi_interconnect_M00_AXI 1 1 1 530
-preplace netloc microblaze_core_dlmb_1 1 1 1 590J
-preplace netloc reset_rtl_1 1 0 1 -30J
-levelinfo -pg 1 -50 290 750 1180 -top -450 -bot 930
+preplace inst clk_wiz -pg 1 -lvl 1 -y -400 -defaultsOSRD
+preplace inst axi_interconnect -pg 1 -lvl 1 -y 290 -defaultsOSRD
+preplace inst microblaze_core -pg 1 -lvl 1 -y -100 -defaultsOSRD
+preplace inst Output_Compare_0 -pg 1 -lvl 4 -y 300 -defaultsOSRD
+preplace inst rst_clk_100M -pg 1 -lvl 1 -y -260 -defaultsOSRD
+preplace inst axi_timer -pg 1 -lvl 3 -y -260 -defaultsOSRD
+preplace inst microblaze_core_local_memory -pg 1 -lvl 3 -y -430 -defaultsOSRD
+preplace inst axi_gpio -pg 1 -lvl 3 -y 60 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 3 -y -70 -defaultsOSRD
+preplace inst Timer_0 -pg 1 -lvl 4 -y 560 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 1 -y 570 -defaultsOSRD
+preplace inst Timer_1 -pg 1 -lvl 4 -y 760 -defaultsOSRD
+preplace inst BRAM_Interconnect_0 -pg 1 -lvl 2 -y 570 -defaultsOSRD
+preplace netloc BRAM_Interconnect_0_s3_en_o 1 2 2 NJ 670 1600
+preplace netloc BRAM_Interconnect_0_s2_en_o 1 2 2 NJ 590 N
+preplace netloc BRAM_Interconnect_0_s2_addr_bo 1 2 2 NJ 550 N
+preplace netloc axi_bram_ctrl_0_bram_addr_a 1 1 1 860
+preplace netloc axi_bram_ctrl_0_bram_clk_a 1 1 3 870 400 NJ 400 1640J
+preplace netloc clk_wiz_locked 1 0 2 30 -500 860
+preplace netloc Timer_0_timer_val_bo 1 3 2 1650 460 2020
+preplace netloc BRAM_Interconnect_0_s3_we_bo 1 2 2 N 690 1590J
+preplace netloc BRAM_Interconnect_0_s2_we_bo 1 2 2 N 610 NJ
+preplace netloc axi_interconnect_M01_AXI 1 1 2 890 -90 NJ
+preplace netloc BRAM_Interconnect_0_s1_wrdata_bo 1 2 2 1330 290 NJ
+preplace netloc capturetrig0_1 1 0 3 -30J -520 NJ -520 1310
+preplace netloc axi_gpio_GPIO 1 3 2 NJ 60 N
+preplace netloc BRAM_Interconnect_0_s2_wrdata_bo 1 2 2 NJ 570 N
+preplace netloc BRAM_Interconnect_0_s1_we_bo 1 2 2 1350 330 NJ
+preplace netloc BRAM_Interconnect_0_s3_addr_bo 1 2 2 NJ 630 1630
+preplace netloc BRAM_Interconnect_0_s1_addr_bo 1 2 2 1320 270 NJ
+preplace netloc axi_timer_pwm0 1 3 2 N -250 NJ
+preplace netloc rst_clk_100M_interconnect_aresetn 1 0 2 10 -480 870
+preplace netloc axi_interconnect_M02_AXI 1 1 2 930 40 NJ
+preplace netloc axi_bram_ctrl_0_bram_wrdata_a 1 1 1 860
+preplace netloc axi_bram_ctrl_0_bram_rst_a 1 1 3 880 750 1340J 730 1620J
+preplace netloc rst_clk_100M_peripheral_aresetn 1 0 3 20 -460 850 -220 1310
+preplace netloc microblaze_core_Clk 1 0 3 0 -490 880 -420 1350
+preplace netloc axi_uartlite_0_UART 1 3 2 NJ -80 N
+preplace netloc microblaze_core_ilmb_1 1 1 2 910J -440 NJ
+preplace netloc BRAM_Interconnect_0_s1_en_o 1 2 2 1340 310 NJ
+preplace netloc axi_bram_ctrl_0_bram_we_a 1 1 1 900
+preplace netloc rst_clk_100M_bus_struct_reset 1 1 2 900J -400 NJ
+preplace netloc microblaze_core_M_AXI_DP 1 0 2 40 -20 840
+preplace netloc Timer_1_rddata_bo 1 1 4 930 870 NJ 870 NJ 870 2020
+preplace netloc axi_timer_generateout0 1 3 2 N -290 NJ
+preplace netloc clock_rtl_1 1 0 1 -20J
+preplace netloc rst_clk_100M_mb_reset 1 0 2 40 -470 840
+preplace netloc axi_interconnect_M00_AXI 1 0 2 40 690 840
+preplace netloc Timer_0_rddata_bo 1 1 4 910 880 NJ 880 NJ 880 2040
+preplace netloc BRAM_Interconnect_0_s3_wrdata_bo 1 2 2 NJ 650 1610
+preplace netloc axi_bram_ctrl_0_bram_en_a 1 1 1 870
+preplace netloc axi_interconnect_M03_AXI 1 1 2 920 -310 NJ
+preplace netloc microblaze_core_dlmb_1 1 1 2 890J -460 NJ
+preplace netloc Timer_1_timer_val_bo 1 3 2 1660 420 2030
+preplace netloc Output_Compare_0_rddata_bo 1 1 4 920 860 NJ 860 NJ 860 2050
+preplace netloc BRAM_Interconnect_0_rddara_bo 1 1 2 860J 740 1310
+preplace netloc reset_rtl_1 1 0 1 -10J
+levelinfo -pg 1 -50 600 1120 1470 1840 2070 -top -550 -bot 930
 ",
 }
 {
