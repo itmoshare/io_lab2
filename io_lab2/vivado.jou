@@ -2,180 +2,379 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Mon Dec 11 22:48:38 2017
-# Process ID: 17256
+# Start of session at: Tue Dec 12 16:47:41 2017
+# Process ID: 16992
 # Current directory: D:/projects/itmo/io_lab2/io_lab2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12876 D:\projects\itmo\io_lab2\io_lab2\io_lab2.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13056 D:\projects\itmo\io_lab2\io_lab2\io_lab2.xpr
 # Log file: D:/projects/itmo/io_lab2/io_lab2/vivado.log
 # Journal file: D:/projects/itmo/io_lab2/io_lab2\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project D:/projects/itmo/io_lab2/io_lab2/io_lab2.xpr
 update_compile_order -fileset sources_1
-launch_sdk -workspace D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk -hwspec D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf
 open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
+create_bd_cell -type module -reference Timer Timer_2
+delete_bd_objs [get_bd_cells Timer_2]
+create_bd_cell -type module -reference Timer Timer_2
+delete_bd_objs [get_bd_cells Timer_2]
+validate_bd_design
+update_module_reference {uc_system_Timer_0_1 uc_system_Timer_1_0 uc_system_Timer_2_0 uc_system_Timer_2_1}
+validate_bd_design
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+generate_target all [get_files  D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+catch { config_ip_cache -export [get_ips -all uc_system_xbar_1] }
+catch { config_ip_cache -export [get_ips -all uc_system_axi_bram_ctrl_0_0] }
+catch { config_ip_cache -export [get_ips -all uc_system_axi_uartlite_0_0] }
+catch { config_ip_cache -export [get_ips -all uc_system_s00_mmu_0] }
+catch { config_ip_cache -export [get_ips -all uc_system_auto_pc_0] }
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+launch_runs -jobs 2 {uc_system_xbar_1_synth_1 uc_system_axi_bram_ctrl_0_0_synth_1 uc_system_axi_uartlite_0_0_synth_1 uc_system_BRAM_Interconnect_0_0_synth_1 uc_system_Timer_0_1_synth_1 uc_system_Timer_1_0_synth_1 uc_system_Output_Compare_0_0_synth_1 uc_system_s00_mmu_0_synth_1 uc_system_auto_pc_0_synth_1}
+export_simulation -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -directory D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/sim_scripts -ip_user_files_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files -ipstatic_source_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/modelsim} {questa=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/questa} {riviera=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/riviera} {activehdl=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+write_hwdef -force  -file D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf
+assign_bd_address
+validate_bd_design
+update_module_reference {uc_system_Timer_0_1 uc_system_Timer_1_0}
+update_module_reference uc_system_BRAM_Interconnect_0_0
+update_module_reference uc_system_BRAM_Interconnect_0_0
+update_module_reference {uc_system_Timer_0_1 uc_system_Timer_1_0}
+update_module_reference uc_system_BRAM_Interconnect_0_0
+connect_bd_net [get_bd_pins BRAM_Interconnect_0/rddata_bo] [get_bd_pins axi_bram_ctrl_0/bram_rddata_a]
+save_bd_design
+validate_bd_design
+update_module_reference uc_system_BRAM_Interconnect_0_0
+validate_bd_design
+update_module_reference uc_system_BRAM_Interconnect_0_0
+update_module_reference uc_system_BRAM_Interconnect_0_0
+startgroup
+set_property -dict [list CONFIG.addr1_1 {12} CONFIG.addr2_0 {12} CONFIG.addr2_1 {24} CONFIG.addr3_0 {24} CONFIG.addr3_1 {32}] [get_bd_cells BRAM_Interconnect_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.ADDRESS {12}] [get_bd_cells Timer_1]
+endgroup
+save_bd_design
+generate_target all [get_files  D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+catch { config_ip_cache -export [get_ips -all uc_system_xbar_1] }
+catch { config_ip_cache -export [get_ips -all uc_system_axi_bram_ctrl_0_0] }
+catch { config_ip_cache -export [get_ips -all uc_system_auto_pc_0] }
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+launch_runs -jobs 2 {uc_system_xbar_1_synth_1 uc_system_axi_bram_ctrl_0_0_synth_1 uc_system_BRAM_Interconnect_0_0_synth_1 uc_system_Timer_0_1_synth_1 uc_system_Timer_1_0_synth_1 uc_system_auto_pc_0_synth_1}
+export_simulation -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -directory D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/sim_scripts -ip_user_files_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files -ipstatic_source_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/modelsim} {questa=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/questa} {riviera=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/riviera} {activehdl=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+write_hwdef -force  -file D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf
+launch_sdk -workspace D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk -hwspec D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf
 launch_simulation
 open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
 source sim_tb.tcl
-run 10 ns
-run 10 us
 run 15 us
-file mkdir D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new
-close [ open D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/Timer_v1_0.v w ]
-add_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/Timer_v1_0.v
-update_compile_order -fileset sources_1
 open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
-create_bd_cell -type module -reference Timer Timer_0
-create_bd_cell -type module -reference Timer Timer_0
-set_property location {2 530 520} [get_bd_cells Timer_0]
-undo
-undo
-set_property location {3 1037 -287} [get_bd_cells microblaze_core_local_memory]
-set_property location {2 1016 -16} [get_bd_cells axi_timer]
-set_property location {2 1050 154} [get_bd_cells axi_gpio]
-set_property location {62 -308} [get_bd_ports reset_rtl]
-close [ open D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/BRAM_Interconnect_v1_0.v w ]
-add_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/BRAM_Interconnect_v1_0.v
-update_compile_order -fileset sources_1
-save_bd_design
+update_module_reference {uc_system_Timer_0_1 uc_system_Timer_1_0}
+close_sim
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+update_module_reference {uc_system_Timer_0_1 uc_system_Timer_1_0}
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 15 us
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
+relaunch_sim
+run 15 us
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
 startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.0 axi_bram_ctrl_0
+set_property -dict [list CONFIG.addr1_0 {24} CONFIG.addr1_1 {32} CONFIG.addr2_0 {0} CONFIG.addr2_1 {12} CONFIG.addr3_0 {12} CONFIG.addr3_1 {24}] [get_bd_cells BRAM_Interconnect_0]
 endgroup
-set_property -dict [list CONFIG.SINGLE_PORT_BRAM {1}] [get_bd_cells axi_bram_ctrl_0]
-delete_bd_objs [get_bd_intf_nets axi_interconnect_M00_AXI]
-delete_bd_objs [get_bd_intf_nets axi_interconnect_M01_AXI]
+save_bd_design
+close_sim
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 15 us
+relaunch_sim
+run 15 us
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
+update_module_reference uc_system_BRAM_Interconnect_0_0
+close_sim
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 15 us
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
 startgroup
-set_property -dict [list CONFIG.NUM_MI {4}] [get_bd_cells axi_interconnect]
+set_property -dict [list CONFIG.addr2_1 {11} CONFIG.addr3_1 {23}] [get_bd_cells BRAM_Interconnect_0]
 endgroup
-connect_bd_net [get_bd_pins axi_interconnect/M02_ARESETN] [get_bd_pins rst_clk_100M/peripheral_aresetn]
-connect_bd_net [get_bd_pins axi_interconnect/M03_ARESETN] [get_bd_pins rst_clk_100M/peripheral_aresetn]
-connect_bd_net [get_bd_pins axi_interconnect/M03_ACLK] [get_bd_pins clk_wiz/clk_out1]
-connect_bd_net [get_bd_pins axi_interconnect/M02_ACLK] [get_bd_pins clk_wiz/clk_out1]
-save_bd_design
-connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect/M00_AXI] [get_bd_intf_pins axi_bram_ctrl_0/S_AXI]
-connect_bd_net [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1]
-save_bd_design
-connect_bd_net [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins rst_clk_100M/peripheral_aresetn]
-save_bd_design
-set_property location {2 1086 226} [get_bd_cells axi_gpio]
-set_property location {2 1084 64} [get_bd_cells axi_timer]
+close_sim
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 15 us
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
 startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
 endgroup
-set_property location {2 1079 -140} [get_bd_cells axi_timer]
-set_property location {2 1085 57} [get_bd_cells axi_uartlite_0]
-connect_bd_intf_net [get_bd_intf_pins axi_uartlite_0/S_AXI] -boundary_type upper [get_bd_intf_pins axi_interconnect/M01_AXI]
-connect_bd_net [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1]
-connect_bd_net [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins rst_clk_100M/peripheral_aresetn]
+generate_target all [get_files  D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+catch { config_ip_cache -export [get_ips -all uc_system_auto_pc_0] }
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+launch_runs -jobs 2 {uc_system_BRAM_Interconnect_0_0_synth_1 uc_system_Timer_0_1_synth_1 uc_system_Timer_1_0_synth_1}
+export_simulation -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -directory D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/sim_scripts -ip_user_files_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files -ipstatic_source_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/modelsim} {questa=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/questa} {riviera=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/riviera} {activehdl=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 15 us
+relaunch_sim
+run 15 us
+relaunch_sim
+run 15 us
+add_bp {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/Timer_v1_0.v} 41
+remove_bps -file {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/Timer_v1_0.v} -line 41
+add_bp {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/Timer_v1_0.v} 41
+relaunch_sim
+run 15 us
+remove_bps -file {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/Timer_v1_0.v} -line 41
+restart
+generate_target all [get_files  D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_simulation -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -directory D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/sim_scripts -ip_user_files_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files -ipstatic_source_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/modelsim} {questa=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/questa} {riviera=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/riviera} {activehdl=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 15 us
+generate_target all [get_files  D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_simulation -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -directory D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/sim_scripts -ip_user_files_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files -ipstatic_source_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/modelsim} {questa=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/questa} {riviera=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/riviera} {activehdl=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 15 us
+relaunch_sim
+run 15 us
+relaunch_sim
+run 15 us
+relaunch_sim
+run 15 us
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
+update_module_reference {uc_system_Timer_0_1 uc_system_Timer_1_0}
+update_module_reference uc_system_Output_Compare_0_0
+startgroup
+set_property -dict [list CONFIG.C_DEBUG_ENABLED {0}] [get_bd_cells microblaze_core]
+endgroup
+connect_bd_net [get_bd_pins axi_uartlite_0/interrupt] [get_bd_pins microblaze_core/Interrupt]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_intc:4.1 axi_intc_0
+endgroup
+delete_bd_objs [get_bd_cells axi_intc_0]
 save_bd_design
-create_bd_port -dir O uart_rtl
-set_property location {1243 51} [get_bd_ports uart_rtl]
-set_property location {1167 53} [get_bd_ports uart_rtl]
-set_property location {1284 37} [get_bd_ports uart_rtl]
-set_property location {1232 49} [get_bd_ports uart_rtl]
-delete_bd_objs [get_bd_ports uart_rtl]
-create_bd_port -dir O uart_rtl
-set_property location {1265 43} [get_bd_ports uart_rtl]
-delete_bd_objs [get_bd_ports uart_rtl]
-create_bd_port -dir O -type data uart_rtl
-set_property location {1282 37} [get_bd_ports uart_rtl]
-delete_bd_objs [get_bd_ports uart_rtl]
-create_bd_port -dir O -from 2 -to 0 uart_rtl
-set_property location {1256 70} [get_bd_ports uart_rtl]
-set_property location {1235 50} [get_bd_ports uart_rtl]
-delete_bd_objs [get_bd_ports uart_rtl]
-set_property location {1198 219} [get_bd_intf_ports gpio_rtl]
+update_module_reference uc_system_Output_Compare_0_0
+generate_target all [get_files  D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+catch { config_ip_cache -export [get_ips -all uc_system_microblaze_0_0] }
+catch { config_ip_cache -export [get_ips -all uc_system_auto_pc_0] }
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+launch_runs -jobs 2 {uc_system_microblaze_0_0_synth_1 uc_system_Timer_0_1_synth_1 uc_system_Timer_1_0_synth_1 uc_system_Output_Compare_0_0_synth_1}
+export_simulation -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -directory D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/sim_scripts -ip_user_files_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files -ipstatic_source_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/modelsim} {questa=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/questa} {riviera=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/riviera} {activehdl=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 15 us
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
+close_sim
+launch_simulation
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
+launch_simulation
+generate_target all [get_files  D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_simulation -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -directory D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/sim_scripts -ip_user_files_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files -ipstatic_source_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/modelsim} {questa=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/questa} {riviera=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/riviera} {activehdl=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+validate_bd_design -force
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 15 us
+run all
+relaunch_sim
+run 15 us
+run 20 us
+close_sim
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 20 us
+relaunch_sim
+run 20 us
+add_bp {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sim_1/new/sim_tb.v} 51
+remove_bps -file {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sim_1/new/sim_tb.v} -line 51
+add_bp {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sim_1/new/sim_tb.v} 51
+relaunch_sim
+run 20 us
+remove_bps -file {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sim_1/new/sim_tb.v} -line 51
+step
+step
+step
+step
+relaunch_sim
+run 20 us
+relaunch_sim
+run 20 us
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
+relaunch_sim
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
+set_property location {2166 -92} [get_bd_intf_ports uart_rtl]
+create_bd_port -dir I uart_rx
+delete_bd_objs [get_bd_intf_nets axi_uartlite_0_UART]
+connect_bd_net [get_bd_ports uart_rx] [get_bd_pins axi_uartlite_0/rx]
+close_sim
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
+delete_bd_objs [get_bd_intf_ports uart_rtl]
+save_bd_design
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+delete_bd_objs [get_bd_nets uart_rx_1] [get_bd_ports uart_rx]
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 uart_rtl
+set_property location {2260 -109} [get_bd_intf_ports uart_rtl]
+delete_bd_objs [get_bd_intf_ports uart_rtl]
 startgroup
 create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 uart_rtl
 connect_bd_intf_net [get_bd_intf_pins axi_uartlite_0/UART] [get_bd_intf_ports uart_rtl]
 endgroup
 save_bd_design
-create_bd_cell -type module -reference BRAM_Interconnect BRAM_Interconnect_0
-set_property location {2 1074 589} [get_bd_cells BRAM_Interconnect_0]
-startgroup
-set_property -dict [list CONFIG.PROTOCOL {AXI4LITE} CONFIG.ECC_TYPE {0}] [get_bd_cells axi_bram_ctrl_0]
-endgroup
-startgroup
-set_property -dict [list CONFIG.PROTOCOL {AXI4}] [get_bd_cells axi_bram_ctrl_0]
-endgroup
-connect_bd_net [get_bd_pins axi_bram_ctrl_0/bram_addr_a] [get_bd_pins BRAM_Interconnect_0/addr_bi]
-undo
-connect_bd_net [get_bd_pins axi_bram_ctrl_0/bram_we_a] [get_bd_pins BRAM_Interconnect_0/we_bi]
-connect_bd_net [get_bd_pins axi_bram_ctrl_0/bram_rst_a] [get_bd_pins BRAM_Interconnect_0/rst_i]
-connect_bd_net [get_bd_pins axi_bram_ctrl_0/bram_clk_a] [get_bd_pins BRAM_Interconnect_0/clk_i]
-set_property location {2 1101 622} [get_bd_cells BRAM_Interconnect_0]
-create_bd_cell -type module -reference Timer Timer_0
-set_property location {4 1620 576} [get_bd_cells Timer_0]
-create_bd_cell -type module -reference Timer Timer_1
-set_property location {2 1079 568} [get_bd_cells BRAM_Interconnect_0]
-set_property location {3 1464 -58} [get_bd_cells axi_uartlite_0]
-set_property location {3 1463 62} [get_bd_cells axi_gpio]
-set_property location {2069 -80} [get_bd_intf_ports uart_rtl]
-set_property location {1989 66} [get_bd_intf_ports gpio_rtl]
-set_property location {4 1833 468} [get_bd_cells Timer_0]
-set_property location {4 1788 619} [get_bd_cells Timer_1]
-connect_bd_net [get_bd_pins axi_bram_ctrl_0/bram_clk_a] [get_bd_pins Timer_0/clk_i]
-connect_bd_net [get_bd_pins Timer_1/clk_i] [get_bd_pins axi_bram_ctrl_0/bram_clk_a]
-connect_bd_net [get_bd_pins Timer_0/rst_i] [get_bd_pins axi_bram_ctrl_0/bram_rst_a]
-connect_bd_net [get_bd_pins Timer_1/rst_i] [get_bd_pins axi_bram_ctrl_0/bram_rst_a]
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+generate_target Simulation [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -force -quiet
+launch_simulation
+generate_target all [get_files  D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+catch { config_ip_cache -export [get_ips -all uc_system_auto_pc_0] }
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+export_simulation -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -directory D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/sim_scripts -ip_user_files_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files -ipstatic_source_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/modelsim} {questa=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/questa} {riviera=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/riviera} {activehdl=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 20 us
+relaunch_sim
+run 20 us
+close_sim
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 20 us
+relaunch_sim
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 20 us
+close_sim
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 20 us
+relaunch_sim
+relaunch_sim
+run 20 us
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
+delete_bd_objs [get_bd_nets axi_uartlite_0_interrupt]
 save_bd_design
-update_compile_order -fileset sources_1
-connect_bd_net [get_bd_pins axi_bram_ctrl_0/bram_wrdata_a] [get_bd_pins BRAM_Interconnect_0/wrdata_bi]
-connect_bd_net [get_bd_pins axi_bram_ctrl_0/bram_en_a] [get_bd_pins BRAM_Interconnect_0/en_i]
-save_bd_design
-connect_bd_net [get_bd_pins axi_bram_ctrl_0/bram_addr_a] [get_bd_pins BRAM_Interconnect_0/addr_bi]
-save_bd_design
-set_property location {4 1738 755} [get_bd_cells Timer_1]
-set_property location {4 1762 579} [get_bd_cells Timer_0]
-save_bd_design
-close [ open D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/Output_Compare_v1_0.v w ]
-add_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/Output_Compare_v1_0.v
-update_compile_order -fileset sources_1
-create_bd_cell -type module -reference Output_Compare Output_Compare_0
-set_property location {4 1771 305} [get_bd_cells Output_Compare_0]
-save_bd_design
-update_compile_order -fileset sources_1
-connect_bd_net [get_bd_pins Output_Compare_0/clk_i] [get_bd_pins axi_bram_ctrl_0/bram_clk_a]
-connect_bd_net [get_bd_pins Output_Compare_0/rst_i] [get_bd_pins axi_bram_ctrl_0/bram_rst_a]
-save_bd_design
-connect_bd_net [get_bd_pins BRAM_Interconnect_0/s1_addr_bo] [get_bd_pins Output_Compare_0/addr_bi]
-connect_bd_net [get_bd_pins BRAM_Interconnect_0/s1_wrdata_bo] [get_bd_pins Output_Compare_0/wrdata_bi]
-save_bd_design
-connect_bd_net [get_bd_pins BRAM_Interconnect_0/s1_en_o] [get_bd_pins Output_Compare_0/en_i]
-save_bd_design
-connect_bd_net [get_bd_pins BRAM_Interconnect_0/s2_addr_bo] [get_bd_pins Timer_0/addr_bi]
-connect_bd_net [get_bd_pins BRAM_Interconnect_0/s2_wrdata_bo] [get_bd_pins Timer_0/wrdata_bi]
-connect_bd_net [get_bd_pins BRAM_Interconnect_0/s2_en_o] [get_bd_pins Timer_0/en_i]
-save_bd_design
-connect_bd_net [get_bd_pins BRAM_Interconnect_0/s3_addr_bo] [get_bd_pins Timer_1/addr_bi]
-connect_bd_net [get_bd_pins BRAM_Interconnect_0/s3_wrdata_bo] [get_bd_pins Timer_1/wrdata_bi]
-connect_bd_net [get_bd_pins BRAM_Interconnect_0/s3_en_o] [get_bd_pins Timer_1/en_i]
-save_bd_design
-set_property location {4 1768 556} [get_bd_cells Timer_0]
-set_property location {4 1768 756} [get_bd_cells Timer_1]
-save_bd_design
-connect_bd_net [get_bd_pins BRAM_Interconnect_0/s1_we_bo] [get_bd_pins Output_Compare_0/we_bi]
-save_bd_design
-connect_bd_net [get_bd_pins BRAM_Interconnect_0/s2_we_bo] [get_bd_pins Timer_0/we_bi]
-connect_bd_net [get_bd_pins BRAM_Interconnect_0/s3_we_bo] [get_bd_pins Timer_1/we_bi]
-save_bd_design
-connect_bd_net [get_bd_pins BRAM_Interconnect_0/rddara_bo] [get_bd_pins axi_bram_ctrl_0/bram_rddata_a]
-save_bd_design
-connect_bd_net [get_bd_pins Output_Compare_0/rddata_bo] [get_bd_pins BRAM_Interconnect_0/s1_rddata_bi]
-save_bd_design
-connect_bd_net [get_bd_pins Timer_0/rddata_bo] [get_bd_pins BRAM_Interconnect_0/s2_rddata_bi]
-connect_bd_net [get_bd_pins Timer_1/rddata_bo] [get_bd_pins BRAM_Interconnect_0/s3_rddata_bi]
-save_bd_design
-connect_bd_net [get_bd_pins Timer_0/timer_val_bo] [get_bd_pins Output_Compare_0/timer1_val_bi]
-connect_bd_net [get_bd_pins Timer_1/timer_val_bo] [get_bd_pins Output_Compare_0/timer2_val_bi]
-save_bd_design
-connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect/M02_AXI] [get_bd_intf_pins axi_gpio/S_AXI]
-connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect/M03_AXI] [get_bd_intf_pins axi_timer/S_AXI]
-save_bd_design
-set_property location {2089 -288} [get_bd_ports generateout0]
-set_property location {2106 -253} [get_bd_ports pwm0]
-save_bd_design
-set_property location {2081 54} [get_bd_intf_ports gpio_rtl]
-set_property location {2082 56} [get_bd_intf_ports gpio_rtl]
-save_bd_design
+generate_target all [get_files  D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+catch { config_ip_cache -export [get_ips -all uc_system_microblaze_0_0] }
+catch { config_ip_cache -export [get_ips -all uc_system_auto_pc_0] }
+export_ip_user_files -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd]
+launch_runs -jobs 2 uc_system_microblaze_0_0_synth_1
+export_simulation -of_objects [get_files D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd] -directory D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/sim_scripts -ip_user_files_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files -ipstatic_source_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/modelsim} {questa=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/questa} {riviera=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/riviera} {activehdl=D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+write_hwdef -force  -file D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf
+launch_sdk -workspace D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk -hwspec D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf
+close_sim
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 20 us
+relaunch_sim
+run 20 us
+relaunch_sim
+run 20 us
+run all
+relaunch_sim
+relaunch_sim
+run 20 us
+relaunch_sim
+run 20 us
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
+add_files -fileset sim_1 -norecurse D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/test/Debug/test.elf
+set_property SCOPED_TO_REF "" [get_files -all -of_objects [get_fileset sim_1] {D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/test_mb/Debug/test_mb.elf}]
+set_property SCOPED_TO_CELLS { } [get_files -all -of_objects [get_fileset sim_1] {D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/test_mb/Debug/test_mb.elf}]
+set_property SCOPED_TO_REF uc_system [get_files -all -of_objects [get_fileset sim_1] {D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/test/Debug/test.elf}]
+set_property SCOPED_TO_CELLS { microblaze_core } [get_files -all -of_objects [get_fileset sim_1] {D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/test/Debug/test.elf}]
+close_sim
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 20 us
+relaunch_sim
+run 20 us
+relaunch_sim
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg
+source sim_tb.tcl
+run 20 us
+relaunch_sim
+run 20 us
+relaunch_sim
+run 20 us
+run 20 us
+relaunch_sim
+run 20 us
+open_bd_design {D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/uc_system.bd}
+save_wave_config {D:/projects/itmo/io_lab2/io_lab2/sim_tb_behav.wcfg}
 close_sim

@@ -7,6 +7,8 @@ vhdl xil_defaultlib  "../../../io_lab2.ip_user_files/bd/uc_system/ip/uc_system_d
 vhdl xil_defaultlib  "../../../io_lab2.ip_user_files/bd/uc_system/ip/uc_system_ilmb_v10_0/sim/uc_system_ilmb_v10_0.vhd"
 vhdl xil_defaultlib  "../../../io_lab2.ip_user_files/bd/uc_system/ip/uc_system_dlmb_bram_if_cntlr_0/sim/uc_system_dlmb_bram_if_cntlr_0.vhd"
 vhdl xil_defaultlib  "../../../io_lab2.ip_user_files/bd/uc_system/ip/uc_system_ilmb_bram_if_cntlr_0/sim/uc_system_ilmb_bram_if_cntlr_0.vhd"
+vhdl xil_defaultlib  "../../../io_lab2.ip_user_files/bd/uc_system/ip/uc_system_axi_bram_ctrl_0_0/sim/uc_system_axi_bram_ctrl_0_0.vhd"
+vhdl xil_defaultlib  "../../../io_lab2.ip_user_files/bd/uc_system/ip/uc_system_axi_uartlite_0_0/sim/uc_system_axi_uartlite_0_0.vhd"
 
 # Do not sort compile order
 nosort

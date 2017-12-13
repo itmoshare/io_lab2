@@ -28,3 +28,53 @@
 22:51:38 INFO  : Registering command handlers for SDK TCF services
 22:51:53 INFO  : Processing command line option -hwspec D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf.
 22:51:53 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_2.
+19:05:55 INFO  : Registering command handlers for SDK TCF services
+19:05:56 INFO  : Launching XSCT server: xsct.bat -interactive D:\projects\itmo\io_lab2\io_lab2\io_lab2.sdk\temp_xsdb_launch_script.tcl
+19:06:07 INFO  : XSCT server has started successfully.
+19:06:07 INFO  : Successfully done setting XSCT server connection channel  
+19:06:22 INFO  : Successfully done setting SDK workspace  
+19:06:22 INFO  : Processing command line option -hwspec D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf.
+19:06:22 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_2.
+19:06:23 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1513094692812,  Project:1512902132991
+19:06:23 INFO  : The hardware specification for project 'uc_system_wrapper_hw_platform_2' is different from D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf.
+19:06:23 INFO  : Copied contents of D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf into \uc_system_wrapper_hw_platform_2\system.hdf.
+19:06:23 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+19:06:23 INFO  : Clearing existing target manager status.
+19:06:26 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+19:06:26 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+01:12:40 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1513116756189,  Project:1513094692812
+01:12:40 INFO  : Project uc_system_wrapper_hw_platform_2's source hardware specification located at D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+01:12:58 INFO  : Copied contents of D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf into \uc_system_wrapper_hw_platform_2\system.hdf.
+01:12:58 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+01:12:58 INFO  : Clearing existing target manager status.
+01:12:58 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+01:12:58 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+02:55:49 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+10:46:12 INFO  : Registering command handlers for SDK TCF services
+10:46:14 INFO  : Launching XSCT server: xsct.bat -interactive D:\projects\itmo\io_lab2\io_lab2\io_lab2.sdk\temp_xsdb_launch_script.tcl
+10:46:20 INFO  : XSCT server has started successfully.
+10:46:20 INFO  : Successfully done setting XSCT server connection channel  
+10:46:25 INFO  : Successfully done setting SDK workspace  
+10:46:25 INFO  : Processing command line option -hwspec D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf.
+10:46:25 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_2.
+10:46:26 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1513151131544,  Project:1513116756189
+10:46:26 INFO  : The hardware specification for project 'uc_system_wrapper_hw_platform_2' is different from D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf.
+10:46:26 INFO  : Copied contents of D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf into \uc_system_wrapper_hw_platform_2\system.hdf.
+10:46:26 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:46:35 INFO  : 
+10:46:37 INFO  : Updating hardware inferred compiler options for test.
+10:46:37 INFO  : Clearing existing target manager status.
+17:42:01 ERROR : Unexpected error while fetching XMD's response: 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.read(BufferedReader.java:182)
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess$CommandResultsReader.run(XMDJSONProcess.java:332)
+	at java.lang.Thread.run(Thread.java:745)
+17:42:01 ERROR : Zero sized response read from XMD. This indicates a communication error or a programming error.

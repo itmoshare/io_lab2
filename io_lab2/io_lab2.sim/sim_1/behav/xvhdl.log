@@ -14,3 +14,7 @@ INFO: [VRFC 10-163] Analyzing VHDL file "D:/projects/itmo/io_lab2/io_lab2/io_lab
 INFO: [VRFC 10-307] analyzing entity uc_system_dlmb_bram_if_cntlr_0
 INFO: [VRFC 10-163] Analyzing VHDL file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/ip/uc_system_ilmb_bram_if_cntlr_0/sim/uc_system_ilmb_bram_if_cntlr_0.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity uc_system_ilmb_bram_if_cntlr_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/ip/uc_system_axi_bram_ctrl_0_0/sim/uc_system_axi_bram_ctrl_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity uc_system_axi_bram_ctrl_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/ip/uc_system_axi_uartlite_0_0/sim/uc_system_axi_uartlite_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity uc_system_axi_uartlite_0_0

@@ -20,6 +20,10 @@ vlib riviera/axi_register_slice_v2_1_13
 vlib riviera/fifo_generator_v13_1_4
 vlib riviera/axi_data_fifo_v2_1_12
 vlib riviera/axi_crossbar_v2_1_14
+vlib riviera/axi_bram_ctrl_v4_0_11
+vlib riviera/lib_srl_fifo_v1_0_2
+vlib riviera/axi_uartlite_v2_0_17
+vlib riviera/axi_protocol_converter_v2_1_13
 
 vmap xil_defaultlib riviera/xil_defaultlib
 vmap xpm riviera/xpm
@@ -40,6 +44,10 @@ vmap axi_register_slice_v2_1_13 riviera/axi_register_slice_v2_1_13
 vmap fifo_generator_v13_1_4 riviera/fifo_generator_v13_1_4
 vmap axi_data_fifo_v2_1_12 riviera/axi_data_fifo_v2_1_12
 vmap axi_crossbar_v2_1_14 riviera/axi_crossbar_v2_1_14
+vmap axi_bram_ctrl_v4_0_11 riviera/axi_bram_ctrl_v4_0_11
+vmap lib_srl_fifo_v1_0_2 riviera/lib_srl_fifo_v1_0_2
+vmap axi_uartlite_v2_0_17 riviera/axi_uartlite_v2_0_17
+vmap axi_protocol_converter_v2_1_13 riviera/axi_protocol_converter_v2_1_13
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" \
 "D:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
@@ -135,6 +143,33 @@ vlog -work axi_crossbar_v2_1_14  -v2k5 "+incdir+../../../../io_lab2.srcs/sources
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" \
 "../../../bd/uc_system/ip/uc_system_xbar_1/sim/uc_system_xbar_1.v" \
 "../../../bd/uc_system/hdl/uc_system.v" \
+
+vcom -work axi_bram_ctrl_v4_0_11 -93 \
+"../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/9183/hdl/axi_bram_ctrl_v4_0_rfs.vhd" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/uc_system/ip/uc_system_axi_bram_ctrl_0_0/sim/uc_system_axi_bram_ctrl_0_0.vhd" \
+
+vcom -work lib_srl_fifo_v1_0_2 -93 \
+"../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd" \
+
+vcom -work axi_uartlite_v2_0_17 -93 \
+"../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/uc_system/ip/uc_system_axi_uartlite_0_0/sim/uc_system_axi_uartlite_0_0.vhd" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" \
+"../../../bd/uc_system/ip/uc_system_BRAM_Interconnect_0_0/sim/uc_system_BRAM_Interconnect_0_0.v" \
+"../../../bd/uc_system/ip/uc_system_Timer_0_1/sim/uc_system_Timer_0_1.v" \
+"../../../bd/uc_system/ip/uc_system_Timer_1_0/sim/uc_system_Timer_1_0.v" \
+"../../../bd/uc_system/ip/uc_system_Output_Compare_0_0/sim/uc_system_Output_Compare_0_0.v" \
+
+vlog -work axi_protocol_converter_v2_1_13  -v2k5 "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" \
+"../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/f0ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/9c7f" "+incdir+../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/7e3a/hdl" \
+"../../../bd/uc_system/ip/uc_system_auto_pc_0/sim/uc_system_auto_pc_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

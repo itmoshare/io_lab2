@@ -93,6 +93,33 @@
   "../../../bd/uc_system/ip/uc_system_xbar_1/sim/uc_system_xbar_1.v" \
   "../../../bd/uc_system/hdl/uc_system.v" \
 -endlib
+-makelib ies/axi_bram_ctrl_v4_0_11 \
+  "../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/9183/hdl/axi_bram_ctrl_v4_0_rfs.vhd" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/uc_system/ip/uc_system_axi_bram_ctrl_0_0/sim/uc_system_axi_bram_ctrl_0_0.vhd" \
+-endlib
+-makelib ies/lib_srl_fifo_v1_0_2 \
+  "../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/6039/hdl/lib_srl_fifo_v1_0_rfs.vhd" \
+-endlib
+-makelib ies/axi_uartlite_v2_0_17 \
+  "../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/uc_system/ip/uc_system_axi_uartlite_0_0/sim/uc_system_axi_uartlite_0_0.vhd" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/uc_system/ip/uc_system_BRAM_Interconnect_0_0/sim/uc_system_BRAM_Interconnect_0_0.v" \
+  "../../../bd/uc_system/ip/uc_system_Timer_0_1/sim/uc_system_Timer_0_1.v" \
+  "../../../bd/uc_system/ip/uc_system_Timer_1_0/sim/uc_system_Timer_1_0.v" \
+  "../../../bd/uc_system/ip/uc_system_Output_Compare_0_0/sim/uc_system_Output_Compare_0_0.v" \
+-endlib
+-makelib ies/axi_protocol_converter_v2_1_13 \
+  "../../../../io_lab2.srcs/sources_1/bd/uc_system/ipshared/f0ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/uc_system/ip/uc_system_auto_pc_0/sim/uc_system_auto_pc_0.v" \
+-endlib
 -makelib ies/xil_defaultlib \
   glbl.v
 -endlib

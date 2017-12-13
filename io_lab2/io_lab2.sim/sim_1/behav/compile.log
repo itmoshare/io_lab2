@@ -1,3 +1,9 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/BRAM_Interconnect_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BRAM_Interconnect
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/Timer_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Timer
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/Output_Compare_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Output_Compare
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_clk_wiz.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module uc_system_clk_wiz_0_0_clk_wiz
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.v" into library xil_defaultlib
@@ -9,10 +15,22 @@ INFO: [VRFC 10-311] analyzing module uc_system_xbar_1
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/hdl/uc_system.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module m00_couplers_imp_CL8XN8
 INFO: [VRFC 10-311] analyzing module m01_couplers_imp_1XIA5N0
+INFO: [VRFC 10-311] analyzing module m02_couplers_imp_OXA1LX
+INFO: [VRFC 10-311] analyzing module m03_couplers_imp_13GJAIL
 INFO: [VRFC 10-311] analyzing module microblaze_core_local_memory_imp_1NATDEJ
 INFO: [VRFC 10-311] analyzing module s00_couplers_imp_1EAWDMW
 INFO: [VRFC 10-311] analyzing module uc_system
 INFO: [VRFC 10-311] analyzing module uc_system_microblaze_core_axi_periph_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/ip/uc_system_BRAM_Interconnect_0_0/sim/uc_system_BRAM_Interconnect_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uc_system_BRAM_Interconnect_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/ip/uc_system_Timer_0_1/sim/uc_system_Timer_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uc_system_Timer_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/ip/uc_system_Timer_1_0/sim/uc_system_Timer_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uc_system_Timer_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/ip/uc_system_Output_Compare_0_0/sim/uc_system_Output_Compare_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uc_system_Output_Compare_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/ip/uc_system_auto_pc_0/sim/uc_system_auto_pc_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uc_system_auto_pc_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/hdl/uc_system_wrapper.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module uc_system_wrapper
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sim_1/new/sim_tb.v" into library xil_defaultlib
@@ -35,3 +53,7 @@ INFO: [VRFC 10-163] Analyzing VHDL file "D:/projects/itmo/io_lab2/io_lab2/io_lab
 INFO: [VRFC 10-307] analyzing entity uc_system_dlmb_bram_if_cntlr_0
 INFO: [VRFC 10-163] Analyzing VHDL file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/ip/uc_system_ilmb_bram_if_cntlr_0/sim/uc_system_ilmb_bram_if_cntlr_0.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity uc_system_ilmb_bram_if_cntlr_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/ip/uc_system_axi_bram_ctrl_0_0/sim/uc_system_axi_bram_ctrl_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity uc_system_axi_bram_ctrl_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/ip/uc_system_axi_uartlite_0_0/sim/uc_system_axi_uartlite_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity uc_system_axi_uartlite_0_0

@@ -1,0 +1,4 @@
+THIRPARTY=false
+HW_PROJECT_REFERENCE=uc_system_wrapper_hw_platform_2
+PROCESSOR=microblaze_core
+MSS_FILE=system.mss

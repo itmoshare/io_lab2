@@ -37,6 +37,13 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # To test this script, run the following commands from Vivado Tcl console:
 # source uc_system_script.tcl
 
+
+# The design that will be created by this Tcl script contains the following 
+# module references:
+# BRAM_Interconnect, Output_Compare, Timer, Timer
+
+# Please add the sources of those modules before sourcing this Tcl script.
+
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
 # <./myproj/project_1.xpr> in the current working folder.
@@ -237,20 +244,81 @@ proc create_root_design { parentCell } {
 
   # Create interface ports
   set gpio_rtl [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_rtl ]
+  set uart_rtl [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 uart_rtl ]
 
   # Create ports
-  set capturetrig0 [ create_bd_port -dir I capturetrig0 ]
   set clock_rtl [ create_bd_port -dir I -type clk clock_rtl ]
   set_property -dict [ list \
 CONFIG.FREQ_HZ {100000000} \
 CONFIG.PHASE {0.000} \
  ] $clock_rtl
-  set generateout0 [ create_bd_port -dir O generateout0 ]
-  set pwm0 [ create_bd_port -dir O pwm0 ]
   set reset_rtl [ create_bd_port -dir I -type rst reset_rtl ]
   set_property -dict [ list \
 CONFIG.POLARITY {ACTIVE_HIGH} \
  ] $reset_rtl
+
+  # Create instance: BRAM_Interconnect_0, and set properties
+  set block_name BRAM_Interconnect
+  set block_cell_name BRAM_Interconnect_0
+  if { [catch {set BRAM_Interconnect_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $BRAM_Interconnect_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+    set_property -dict [ list \
+CONFIG.addr1_0 {24} \
+CONFIG.addr1_1 {32} \
+CONFIG.addr2_0 {0} \
+CONFIG.addr2_1 {11} \
+CONFIG.addr3_0 {12} \
+CONFIG.addr3_1 {23} \
+ ] $BRAM_Interconnect_0
+
+  # Create instance: Output_Compare_0, and set properties
+  set block_name Output_Compare
+  set block_cell_name Output_Compare_0
+  if { [catch {set Output_Compare_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $Output_Compare_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: Timer_0, and set properties
+  set block_name Timer
+  set block_cell_name Timer_0
+  if { [catch {set Timer_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $Timer_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: Timer_1, and set properties
+  set block_name Timer
+  set block_cell_name Timer_1
+  if { [catch {set Timer_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $Timer_1 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+    set_property -dict [ list \
+CONFIG.ADDRESS {12} \
+ ] $Timer_1
+
+  # Create instance: axi_bram_ctrl_0, and set properties
+  set axi_bram_ctrl_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.0 axi_bram_ctrl_0 ]
+  set_property -dict [ list \
+CONFIG.ECC_TYPE {0} \
+CONFIG.PROTOCOL {AXI4} \
+CONFIG.SINGLE_PORT_BRAM {1} \
+ ] $axi_bram_ctrl_0
 
   # Create instance: axi_gpio, and set properties
   set axi_gpio [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio ]
@@ -262,11 +330,17 @@ CONFIG.C_GPIO_WIDTH {16} \
   # Create instance: axi_interconnect, and set properties
   set axi_interconnect [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect ]
   set_property -dict [ list \
-CONFIG.NUM_MI {2} \
+CONFIG.NUM_MI {4} \
  ] $axi_interconnect
 
   # Create instance: axi_timer, and set properties
   set axi_timer [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer ]
+
+  # Create instance: axi_uartlite_0, and set properties
+  set axi_uartlite_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0 ]
+  set_property -dict [ list \
+CONFIG.C_BAUDRATE {230400} \
+ ] $axi_uartlite_0
 
   # Create instance: clk_wiz, and set properties
   set clk_wiz [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz ]
@@ -274,7 +348,7 @@ CONFIG.NUM_MI {2} \
   # Create instance: microblaze_core, and set properties
   set microblaze_core [ create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:10.0 microblaze_core ]
   set_property -dict [ list \
-CONFIG.C_DEBUG_ENABLED {1} \
+CONFIG.C_DEBUG_ENABLED {0} \
 CONFIG.C_D_AXI {1} \
 CONFIG.C_D_LMB {1} \
 CONFIG.C_I_LMB {1} \
@@ -288,28 +362,55 @@ CONFIG.C_I_LMB {1} \
 
   # Create interface connections
   connect_bd_intf_net -intf_net axi_gpio_GPIO [get_bd_intf_ports gpio_rtl] [get_bd_intf_pins axi_gpio/GPIO]
-  connect_bd_intf_net -intf_net axi_interconnect_M00_AXI [get_bd_intf_pins axi_gpio/S_AXI] [get_bd_intf_pins axi_interconnect/M00_AXI]
-  connect_bd_intf_net -intf_net axi_interconnect_M01_AXI [get_bd_intf_pins axi_interconnect/M01_AXI] [get_bd_intf_pins axi_timer/S_AXI]
+  connect_bd_intf_net -intf_net axi_interconnect_M00_AXI [get_bd_intf_pins axi_bram_ctrl_0/S_AXI] [get_bd_intf_pins axi_interconnect/M00_AXI]
+  connect_bd_intf_net -intf_net axi_interconnect_M01_AXI [get_bd_intf_pins axi_interconnect/M01_AXI] [get_bd_intf_pins axi_uartlite_0/S_AXI]
+  connect_bd_intf_net -intf_net axi_interconnect_M02_AXI [get_bd_intf_pins axi_gpio/S_AXI] [get_bd_intf_pins axi_interconnect/M02_AXI]
+  connect_bd_intf_net -intf_net axi_interconnect_M03_AXI [get_bd_intf_pins axi_interconnect/M03_AXI] [get_bd_intf_pins axi_timer/S_AXI]
+  connect_bd_intf_net -intf_net axi_uartlite_0_UART [get_bd_intf_ports uart_rtl] [get_bd_intf_pins axi_uartlite_0/UART]
   connect_bd_intf_net -intf_net microblaze_core_M_AXI_DP [get_bd_intf_pins axi_interconnect/S00_AXI] [get_bd_intf_pins microblaze_core/M_AXI_DP]
   connect_bd_intf_net -intf_net microblaze_core_dlmb_1 [get_bd_intf_pins microblaze_core/DLMB] [get_bd_intf_pins microblaze_core_local_memory/DLMB]
   connect_bd_intf_net -intf_net microblaze_core_ilmb_1 [get_bd_intf_pins microblaze_core/ILMB] [get_bd_intf_pins microblaze_core_local_memory/ILMB]
 
   # Create port connections
-  connect_bd_net -net axi_timer_generateout0 [get_bd_ports generateout0] [get_bd_pins axi_timer/generateout0]
-  connect_bd_net -net axi_timer_pwm0 [get_bd_ports pwm0] [get_bd_pins axi_timer/pwm0]
-  connect_bd_net -net capturetrig0_1 [get_bd_ports capturetrig0] [get_bd_pins axi_timer/capturetrig0]
+  connect_bd_net -net BRAM_Interconnect_0_rddara_bo [get_bd_pins BRAM_Interconnect_0/rddata_bo] [get_bd_pins axi_bram_ctrl_0/bram_rddata_a]
+  connect_bd_net -net BRAM_Interconnect_0_s1_addr_bo [get_bd_pins BRAM_Interconnect_0/s1_addr_bo] [get_bd_pins Output_Compare_0/addr_bi]
+  connect_bd_net -net BRAM_Interconnect_0_s1_en_o [get_bd_pins BRAM_Interconnect_0/s1_en_o] [get_bd_pins Output_Compare_0/en_i]
+  connect_bd_net -net BRAM_Interconnect_0_s1_we_bo [get_bd_pins BRAM_Interconnect_0/s1_we_bo] [get_bd_pins Output_Compare_0/we_bi]
+  connect_bd_net -net BRAM_Interconnect_0_s1_wrdata_bo [get_bd_pins BRAM_Interconnect_0/s1_wrdata_bo] [get_bd_pins Output_Compare_0/wrdata_bi]
+  connect_bd_net -net BRAM_Interconnect_0_s2_addr_bo [get_bd_pins BRAM_Interconnect_0/s2_addr_bo] [get_bd_pins Timer_0/addr_bi]
+  connect_bd_net -net BRAM_Interconnect_0_s2_en_o [get_bd_pins BRAM_Interconnect_0/s2_en_o] [get_bd_pins Timer_0/en_i]
+  connect_bd_net -net BRAM_Interconnect_0_s2_we_bo [get_bd_pins BRAM_Interconnect_0/s2_we_bo] [get_bd_pins Timer_0/we_bi]
+  connect_bd_net -net BRAM_Interconnect_0_s2_wrdata_bo [get_bd_pins BRAM_Interconnect_0/s2_wrdata_bo] [get_bd_pins Timer_0/wrdata_bi]
+  connect_bd_net -net BRAM_Interconnect_0_s3_addr_bo [get_bd_pins BRAM_Interconnect_0/s3_addr_bo] [get_bd_pins Timer_1/addr_bi]
+  connect_bd_net -net BRAM_Interconnect_0_s3_en_o [get_bd_pins BRAM_Interconnect_0/s3_en_o] [get_bd_pins Timer_1/en_i]
+  connect_bd_net -net BRAM_Interconnect_0_s3_we_bo [get_bd_pins BRAM_Interconnect_0/s3_we_bo] [get_bd_pins Timer_1/we_bi]
+  connect_bd_net -net BRAM_Interconnect_0_s3_wrdata_bo [get_bd_pins BRAM_Interconnect_0/s3_wrdata_bo] [get_bd_pins Timer_1/wrdata_bi]
+  connect_bd_net -net Output_Compare_0_outs [get_bd_pins Output_Compare_0/outs] [get_bd_pins axi_timer/capturetrig0]
+  connect_bd_net -net Output_Compare_0_rddata_bo [get_bd_pins BRAM_Interconnect_0/s1_rddata_bi] [get_bd_pins Output_Compare_0/rddata_bo]
+  connect_bd_net -net Timer_0_rddata_bo [get_bd_pins BRAM_Interconnect_0/s2_rddata_bi] [get_bd_pins Timer_0/rddata_bo]
+  connect_bd_net -net Timer_0_timer_val_bo [get_bd_pins Output_Compare_0/timer1_val_bi] [get_bd_pins Timer_0/timer_val_bo]
+  connect_bd_net -net Timer_1_rddata_bo [get_bd_pins BRAM_Interconnect_0/s3_rddata_bi] [get_bd_pins Timer_1/rddata_bo]
+  connect_bd_net -net Timer_1_timer_val_bo [get_bd_pins Output_Compare_0/timer2_val_bi] [get_bd_pins Timer_1/timer_val_bo]
+  connect_bd_net -net axi_bram_ctrl_0_bram_addr_a [get_bd_pins BRAM_Interconnect_0/addr_bi] [get_bd_pins axi_bram_ctrl_0/bram_addr_a]
+  connect_bd_net -net axi_bram_ctrl_0_bram_clk_a [get_bd_pins BRAM_Interconnect_0/clk_i] [get_bd_pins Output_Compare_0/clk_i] [get_bd_pins Timer_0/clk_i] [get_bd_pins Timer_1/clk_i] [get_bd_pins axi_bram_ctrl_0/bram_clk_a]
+  connect_bd_net -net axi_bram_ctrl_0_bram_en_a [get_bd_pins BRAM_Interconnect_0/en_i] [get_bd_pins axi_bram_ctrl_0/bram_en_a]
+  connect_bd_net -net axi_bram_ctrl_0_bram_rst_a [get_bd_pins BRAM_Interconnect_0/rst_i] [get_bd_pins Output_Compare_0/rst_i] [get_bd_pins Timer_0/rst_i] [get_bd_pins Timer_1/rst_i] [get_bd_pins axi_bram_ctrl_0/bram_rst_a]
+  connect_bd_net -net axi_bram_ctrl_0_bram_we_a [get_bd_pins BRAM_Interconnect_0/we_bi] [get_bd_pins axi_bram_ctrl_0/bram_we_a]
+  connect_bd_net -net axi_bram_ctrl_0_bram_wrdata_a [get_bd_pins BRAM_Interconnect_0/wrdata_bi] [get_bd_pins axi_bram_ctrl_0/bram_wrdata_a]
   connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins rst_clk_100M/dcm_locked]
   connect_bd_net -net clock_rtl_1 [get_bd_ports clock_rtl] [get_bd_pins clk_wiz/clk_in1]
-  connect_bd_net -net microblaze_core_Clk [get_bd_pins axi_gpio/s_axi_aclk] [get_bd_pins axi_interconnect/ACLK] [get_bd_pins axi_interconnect/M00_ACLK] [get_bd_pins axi_interconnect/M01_ACLK] [get_bd_pins axi_interconnect/S00_ACLK] [get_bd_pins axi_timer/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins microblaze_core/Clk] [get_bd_pins microblaze_core_local_memory/LMB_Clk] [get_bd_pins rst_clk_100M/slowest_sync_clk]
+  connect_bd_net -net microblaze_core_Clk [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_gpio/s_axi_aclk] [get_bd_pins axi_interconnect/ACLK] [get_bd_pins axi_interconnect/M00_ACLK] [get_bd_pins axi_interconnect/M01_ACLK] [get_bd_pins axi_interconnect/M02_ACLK] [get_bd_pins axi_interconnect/M03_ACLK] [get_bd_pins axi_interconnect/S00_ACLK] [get_bd_pins axi_timer/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins microblaze_core/Clk] [get_bd_pins microblaze_core_local_memory/LMB_Clk] [get_bd_pins rst_clk_100M/slowest_sync_clk]
   connect_bd_net -net reset_rtl_1 [get_bd_ports reset_rtl] [get_bd_pins clk_wiz/reset] [get_bd_pins rst_clk_100M/ext_reset_in]
   connect_bd_net -net rst_clk_100M_bus_struct_reset [get_bd_pins microblaze_core_local_memory/SYS_Rst] [get_bd_pins rst_clk_100M/bus_struct_reset]
   connect_bd_net -net rst_clk_100M_interconnect_aresetn [get_bd_pins axi_interconnect/ARESETN] [get_bd_pins rst_clk_100M/interconnect_aresetn]
   connect_bd_net -net rst_clk_100M_mb_reset [get_bd_pins microblaze_core/Reset] [get_bd_pins rst_clk_100M/mb_reset]
-  connect_bd_net -net rst_clk_100M_peripheral_aresetn [get_bd_pins axi_gpio/s_axi_aresetn] [get_bd_pins axi_interconnect/M00_ARESETN] [get_bd_pins axi_interconnect/M01_ARESETN] [get_bd_pins axi_interconnect/S00_ARESETN] [get_bd_pins axi_timer/s_axi_aresetn] [get_bd_pins rst_clk_100M/peripheral_aresetn]
+  connect_bd_net -net rst_clk_100M_peripheral_aresetn [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_gpio/s_axi_aresetn] [get_bd_pins axi_interconnect/M00_ARESETN] [get_bd_pins axi_interconnect/M01_ARESETN] [get_bd_pins axi_interconnect/M02_ARESETN] [get_bd_pins axi_interconnect/M03_ARESETN] [get_bd_pins axi_interconnect/S00_ARESETN] [get_bd_pins axi_timer/s_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins rst_clk_100M/peripheral_aresetn]
 
   # Create address segments
+  create_bd_addr_seg -range 0x00002000 -offset 0xC0000000 [get_bd_addr_spaces microblaze_core/Data] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] SEG_axi_bram_ctrl_0_Mem0
   create_bd_addr_seg -range 0x00010000 -offset 0x40000000 [get_bd_addr_spaces microblaze_core/Data] [get_bd_addr_segs axi_gpio/S_AXI/Reg] SEG_axi_gpio_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x41C00000 [get_bd_addr_spaces microblaze_core/Data] [get_bd_addr_segs axi_timer/S_AXI/Reg] SEG_axi_timer_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x40600000 [get_bd_addr_spaces microblaze_core/Data] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] SEG_axi_uartlite_0_Reg
   create_bd_addr_seg -range 0x00002000 -offset 0x00000000 [get_bd_addr_spaces microblaze_core/Data] [get_bd_addr_segs microblaze_core_local_memory/dlmb_bram_if_cntlr/SLMB/Mem] SEG_dlmb_bram_if_cntlr_Mem
   create_bd_addr_seg -range 0x00002000 -offset 0x00000000 [get_bd_addr_spaces microblaze_core/Instruction] [get_bd_addr_segs microblaze_core_local_memory/ilmb_bram_if_cntlr/SLMB/Mem] SEG_ilmb_bram_if_cntlr_Mem
 
