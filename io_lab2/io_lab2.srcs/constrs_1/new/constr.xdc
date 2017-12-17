@@ -42,3 +42,6 @@ set_property PACKAGE_PIN V15 [get_ports {gpio_rtl_tri_o[12]}]
 set_property PACKAGE_PIN V14 [get_ports {gpio_rtl_tri_o[13]}]
 set_property PACKAGE_PIN V12 [get_ports {gpio_rtl_tri_o[14]}]
 set_property PACKAGE_PIN V11 [get_ports {gpio_rtl_tri_o[15]}]
+
+set_property PACKAGE_PIN N15 [get_ports generateout0]
+set_property PACKAGE_PIN M16 [get_ports pwm0]

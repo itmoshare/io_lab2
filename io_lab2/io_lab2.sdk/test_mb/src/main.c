@@ -8,7 +8,6 @@
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
-#include "xintc_l.h"
 
 #define TIMER_ADDRESS 0x41C00000
 #define GPIO_ADDRESS  0x40000000
@@ -33,24 +32,20 @@ u32 t_old = 0;
 	// Timer 1 start
 	//Xil_Out32(MY_BASE_ADDRESS + 0x0, inData);
 	//Xil_Out32(MY_BASE_ADDRESS + 0x8, 0x2);
-
-//	Xil_Out32(AXI_TIMER_1_ADDRESS + TCS_OFFSET, INTERRUPT | ENT | ENIT | ARHT | DTM);
-//	if (cycle == THIRD) {
-//		cycle = FIRST;
-//	} else {
-//		cycle++;
-//	}
-//	Xil_Out32(AXI_TIMER_0_ADDRESS + TL_OFFSET, LOW_TIME + high_time[cycle] - 2);
-//	Xil_Out32(AXI_TIMER_0_ADDRESS + TIMER1_OFFSET + TL_OFFSET, high_time[cycle] - 2);
-//
-//	Xil_Out32(GPIO_ADDRESS, high_time[cycle] * 10);
 //}
 
 int main()
 {
 	init_platform();
 
-	print("Hello World\n\r");
+	// Output Compare start
+	Xil_Out32(MY_BASE_ADDRESS + 0x18, 500);
+	Xil_Out32(MY_BASE_ADDRESS + 0x1C, 0x4);
+	// Timer 1 start
+	Xil_Out32(MY_BASE_ADDRESS + 0x0, 1000);
+	Xil_Out32(MY_BASE_ADDRESS + 0x8, 0x2);
+
+	//print("Hello World\n\r");
 
 	cleanup_platform();
 	return 0;

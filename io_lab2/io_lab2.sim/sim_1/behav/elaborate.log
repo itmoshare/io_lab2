@@ -34,9 +34,9 @@ Compiling module xil_defaultlib.BRAM_Interconnect(addr1_0=24,add...
 Compiling module xil_defaultlib.uc_system_BRAM_Interconnect_0_0
 Compiling module xil_defaultlib.Output_Compare
 Compiling module xil_defaultlib.uc_system_Output_Compare_0_0
-Compiling module xil_defaultlib.Timer
+Compiling module xil_defaultlib.Timer(ADDRESS=13'b0)
 Compiling module xil_defaultlib.uc_system_Timer_0_1
-Compiling module xil_defaultlib.Timer(ADDRESS=12)
+Compiling module xil_defaultlib.Timer(ADDRESS=13'b01100)
 Compiling module xil_defaultlib.uc_system_Timer_1_0
 Compiling architecture implementation of entity axi_bram_ctrl_v4_0_11.sng_port_arb [\sng_port_arb(c_s_axi_addr_width...]
 Compiling architecture implementation of entity axi_bram_ctrl_v4_0_11.wrap_brst [\wrap_brst(c_axi_addr_width=13,c...]

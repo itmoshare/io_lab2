@@ -77,9 +77,7 @@ input wire [15 : 0] timer2_val_bi;
 output wire [31 : 0] rddata_bo;
 output wire outs;
 
-  Output_Compare #(
-    .ADDRESS(0)
-  ) inst (
+  Output_Compare inst (
     .clk_i(clk_i),
     .rst_i(rst_i),
     .addr_bi(addr_bi),

@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Wed Dec 13 15:45:28 2017
+//Date        : Mon Dec 18 01:10:24 2017
 //Host        : DESKTOP-3JQ772D running 64-bit major release  (build 9200)
 //Command     : generate_target uc_system.bd
 //Design      : uc_system
@@ -1058,12 +1058,16 @@ endmodule
 (* CORE_GENERATION_INFO = "uc_system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=uc_system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=25,numReposBlks=18,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=4,da_clkrst_cnt=1,da_mb_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "uc_system.hwdef" *) 
 module uc_system
    (clock_rtl,
+    generateout0,
     gpio_rtl_tri_o,
+    pwm0,
     reset_rtl,
     uart_rtl_rxd,
     uart_rtl_txd);
   input clock_rtl;
+  output generateout0;
   output [15:0]gpio_rtl_tri_o;
+  output pwm0;
   input reset_rtl;
   input uart_rtl_rxd;
   output uart_rtl_txd;
@@ -1176,6 +1180,8 @@ module uc_system
   wire axi_interconnect_M03_AXI_WREADY;
   wire [3:0]axi_interconnect_M03_AXI_WSTRB;
   wire [0:0]axi_interconnect_M03_AXI_WVALID;
+  wire axi_timer_generateout0;
+  wire axi_timer_pwm0;
   wire axi_uartlite_0_UART_RxD;
   wire axi_uartlite_0_UART_TxD;
   wire clk_wiz_locked;
@@ -1227,7 +1233,9 @@ module uc_system
 
   assign axi_uartlite_0_UART_RxD = uart_rtl_rxd;
   assign clock_rtl_1 = clock_rtl;
+  assign generateout0 = axi_timer_generateout0;
   assign gpio_rtl_tri_o[15:0] = axi_gpio_GPIO_TRI_O;
+  assign pwm0 = axi_timer_pwm0;
   assign reset_rtl_1 = reset_rtl;
   assign uart_rtl_txd = axi_uartlite_0_UART_TxD;
   uc_system_BRAM_Interconnect_0_0 BRAM_Interconnect_0
@@ -1462,6 +1470,8 @@ module uc_system
        (.capturetrig0(Output_Compare_0_outs),
         .capturetrig1(1'b0),
         .freeze(1'b0),
+        .generateout0(axi_timer_generateout0),
+        .pwm0(axi_timer_pwm0),
         .s_axi_aclk(microblaze_core_Clk),
         .s_axi_araddr(axi_interconnect_M03_AXI_ARADDR[4:0]),
         .s_axi_aresetn(rst_clk_100M_peripheral_aresetn),

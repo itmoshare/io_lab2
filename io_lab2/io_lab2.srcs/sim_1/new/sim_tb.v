@@ -40,10 +40,13 @@ module sim_tb;
         rst = 1;
         clk = 0;
         //capturetrig0 = 0;
+        //uart_rtl_txd = 1;
         #200;
         rst = 0;
         
-        #6000;
+        //#6000;
+        //uart_rtl_rxd <= 0;
+        //#500;
         //capturetrig0 <= 1;
         //#1000;
         //uart_rtl_rxd <= 1;

@@ -1,13 +1,24 @@
-14:37:42 **** Auto Build of configuration Debug for project test_mb ****
+22:53:20 **** Auto Build of configuration Debug for project test_mb ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test_mb_bsp/microblaze_core/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c:11:21: fatal error: xintc_l.h: No such file or directory
- #include "xintc_l.h"
-                     ^
-compilation terminated.
-make: *** [src/main.o] Ошибка 1
+../src/main.c: In function 'main':
+../src/main.c:42:2: warning: implicit declaration of function 'Xil_Out32' [-Wimplicit-function-declaration]
+  Xil_Out32(MY_BASE_ADDRESS + 0x18, 500);
+  ^~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: test_mb.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_mb_bsp/microblaze_core/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_mb.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+D:\projects\itmo\io_lab2\io_lab2\io_lab2.sdk\test_mb\Debug/../src/main.c:42: undefined reference to `Xil_Out32'
+D:\projects\itmo\io_lab2\io_lab2\io_lab2.sdk\test_mb\Debug/../src/main.c:43: undefined reference to `Xil_Out32'
+D:\projects\itmo\io_lab2\io_lab2\io_lab2.sdk\test_mb\Debug/../src/main.c:45: undefined reference to `Xil_Out32'
+D:\projects\itmo\io_lab2\io_lab2\io_lab2.sdk\test_mb\Debug/../src/main.c:46: undefined reference to `Xil_Out32'
+collect2.exe: error: ld returned 1 exit status
+make: *** [test_mb.elf] Ошибка 1
 
-14:37:43 Build Finished (took 1s.207ms)
+22:53:22 Build Finished (took 1s.633ms)
 

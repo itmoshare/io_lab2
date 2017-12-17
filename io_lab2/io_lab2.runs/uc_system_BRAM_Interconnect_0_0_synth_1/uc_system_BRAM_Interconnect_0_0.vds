@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Tue Dec 12 21:17:38 2017
-# Process ID: 14404
+# Start of session at: Sat Dec 16 15:37:57 2017
+# Process ID: 4792
 # Current directory: D:/projects/itmo/io_lab2/io_lab2/io_lab2.runs/uc_system_BRAM_Interconnect_0_0_synth_1
 # Command line: vivado.exe -log uc_system_BRAM_Interconnect_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uc_system_BRAM_Interconnect_0_0.tcl
 # Log file: D:/projects/itmo/io_lab2/io_lab2/io_lab2.runs/uc_system_BRAM_Interconnect_0_0_synth_1/uc_system_BRAM_Interconnect_0_0.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 19144 
+INFO: Helper process launched with PID 1508 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 319.930 ; gain = 85.086
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 320.641 ; gain = 85.297
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'uc_system_BRAM_Interconnect_0_0' [d:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_BRAM_Interconnect_0_0/synth/uc_system_BRAM_Interconnect_0_0.v:57]
 INFO: [Synth 8-638] synthesizing module 'BRAM_Interconnect' [D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/BRAM_Interconnect_v1_0.v:23]
@@ -27,42 +27,8 @@ INFO: [Synth 8-638] synthesizing module 'BRAM_Interconnect' [D:/projects/itmo/io
 	Parameter addr2_1 bound to: 11 - type: integer 
 	Parameter addr3_0 bound to: 12 - type: integer 
 	Parameter addr3_1 bound to: 23 - type: integer 
-WARNING: [Synth 8-3848] Net rddata_bo in module/entity BRAM_Interconnect does not have driver. [D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/BRAM_Interconnect_v1_0.v:40]
 INFO: [Synth 8-256] done synthesizing module 'BRAM_Interconnect' (1#1) [D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/BRAM_Interconnect_v1_0.v:23]
 INFO: [Synth 8-256] done synthesizing module 'uc_system_BRAM_Interconnect_0_0' (2#1) [d:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_BRAM_Interconnect_0_0/synth/uc_system_BRAM_Interconnect_0_0.v:57]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[31]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[30]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[29]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[28]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[27]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[26]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[25]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[24]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[23]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[22]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[21]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[20]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[19]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[18]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[17]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[16]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[15]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[14]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[13]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[12]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[11]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[10]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[9]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[8]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[7]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[6]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[5]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[4]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[3]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[2]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[1]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rddata_bo[0]
-WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port rst_i
 WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port we_bi[3]
 WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port we_bi[2]
 WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port we_bi[1]
@@ -130,9 +96,42 @@ WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s2_rddata_
 WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s2_rddata_bi[3]
 WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s2_rddata_bi[2]
 WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s2_rddata_bi[1]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s2_rddata_bi[0]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[31]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[30]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[29]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[28]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[27]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[26]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[25]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[24]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[23]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[22]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[21]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[20]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[19]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[18]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[17]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[16]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[15]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[14]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[13]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[12]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[11]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[10]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[9]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[8]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[7]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[6]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[5]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[4]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[3]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[2]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[1]
+WARNING: [Synth 8-3331] design BRAM_Interconnect has unconnected port s3_rddata_bi[0]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 369.801 ; gain = 134.957
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 370.313 ; gain = 134.969
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -142,7 +141,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 369.801 ; gain = 134.957
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 370.313 ; gain = 134.969
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -154,25 +153,30 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.371 . Memory (MB): peak = 687.859 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 688.918 ; gain = 0.191
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 687.859 ; gain = 453.016
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 688.918 ; gain = 453.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 687.859 ; gain = 453.016
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 688.918 ; gain = 453.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 687.859 ; gain = 453.016
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 688.918 ; gain = 453.574
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 's2_en_o_reg' into 's1_en_o_reg' [D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/BRAM_Interconnect_v1_0.v:65]
+INFO: [Synth 8-4471] merging register 's3_en_o_reg' into 's1_en_o_reg' [D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/BRAM_Interconnect_v1_0.v:69]
+WARNING: [Synth 8-6014] Unused sequential element s2_en_o_reg was removed.  [D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/BRAM_Interconnect_v1_0.v:65]
+WARNING: [Synth 8-6014] Unused sequential element s3_en_o_reg was removed.  [D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/new/BRAM_Interconnect_v1_0.v:69]
+INFO: [Synth 8-5544] ROM "s3_we_bo" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 687.859 ; gain = 453.016
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 688.918 ; gain = 453.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -185,13 +189,15 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 3     
+	               32 Bit    Registers := 4     
 	               13 Bit    Registers := 3     
-	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 5     
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 9     
+	   2 Input     13 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 12    
+	   6 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -202,13 +208,15 @@ Hierarchical RTL Component report
 Module BRAM_Interconnect 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 3     
+	               32 Bit    Registers := 4     
 	               13 Bit    Registers := 3     
-	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 5     
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 9     
+	   2 Input     13 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 12    
+	   6 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -224,22 +232,80 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3917] design uc_system_BRAM_Interconnect_0_0 has port s1_en_o driven by constant 1
-INFO: [Synth 8-3917] design uc_system_BRAM_Interconnect_0_0 has port s2_en_o driven by constant 1
-INFO: [Synth 8-3917] design uc_system_BRAM_Interconnect_0_0 has port s3_en_o driven by constant 1
-INFO: [Synth 8-3886] merging instance 'inst/s3_we_bo_reg[1]' (FDRE) to 'inst/s2_we_bo_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/s3_we_bo_reg[2]' (FDRE) to 'inst/s2_we_bo_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/s3_we_bo_reg[3]' (FDRE) to 'inst/s2_we_bo_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/s2_we_bo_reg[1]' (FDRE) to 'inst/s2_we_bo_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s2_we_bo_reg[2]' (FDRE) to 'inst/s2_we_bo_reg[3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/s2_we_bo_reg[3] )
-INFO: [Synth 8-3886] merging instance 'inst/s1_we_bo_reg[1]' (FDRE) to 'inst/s1_we_bo_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s1_we_bo_reg[2]' (FDRE) to 'inst/s1_we_bo_reg[3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/s1_we_bo_reg[3] )
-INFO: [Synth 8-3332] Sequential element (inst/s1_we_bo_reg[3]) is unused and will be removed from module uc_system_BRAM_Interconnect_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/s2_we_bo_reg[3]) is unused and will be removed from module uc_system_BRAM_Interconnect_0_0.
+INFO: [Synth 8-3917] design uc_system_BRAM_Interconnect_0_0 has port s1_we_bo[3] driven by constant 0
+INFO: [Synth 8-3917] design uc_system_BRAM_Interconnect_0_0 has port s1_we_bo[2] driven by constant 0
+INFO: [Synth 8-3917] design uc_system_BRAM_Interconnect_0_0 has port s1_we_bo[1] driven by constant 0
+INFO: [Synth 8-3917] design uc_system_BRAM_Interconnect_0_0 has port s2_we_bo[3] driven by constant 0
+INFO: [Synth 8-3917] design uc_system_BRAM_Interconnect_0_0 has port s2_we_bo[2] driven by constant 0
+INFO: [Synth 8-3917] design uc_system_BRAM_Interconnect_0_0 has port s2_we_bo[1] driven by constant 0
+INFO: [Synth 8-3917] design uc_system_BRAM_Interconnect_0_0 has port s3_we_bo[3] driven by constant 0
+INFO: [Synth 8-3917] design uc_system_BRAM_Interconnect_0_0 has port s3_we_bo[2] driven by constant 0
+INFO: [Synth 8-3917] design uc_system_BRAM_Interconnect_0_0 has port s3_we_bo[1] driven by constant 0
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst/s1_en_o_reg )
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[0]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[1]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[2]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[3]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[4]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[5]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[6]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[7]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[8]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[9]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[10]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[11]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[12]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[13]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[14]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[15]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[16]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[17]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[18]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[19]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[20]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[21]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[22]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[23]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[24]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[25]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[26]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[27]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[28]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[29]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/rddata_bo_reg[30]' (FDRE) to 'inst/rddata_bo_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rddata_bo_reg[31] )
+INFO: [Synth 8-3332] Sequential element (inst/rddata_bo_reg[31]) is unused and will be removed from module uc_system_BRAM_Interconnect_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/s1_en_o_reg) is unused and will be removed from module uc_system_BRAM_Interconnect_0_0.
+INFO: [Synth 8-3886] merging instance 'inst/s3_addr_bo_reg[5]' (FDE) to 'inst/s3_addr_bo_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/s3_addr_bo_reg[6]' (FDE) to 'inst/s3_addr_bo_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/s3_addr_bo_reg[7]' (FDE) to 'inst/s3_addr_bo_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/s3_addr_bo_reg[8]' (FDE) to 'inst/s3_addr_bo_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/s3_addr_bo_reg[9]' (FDE) to 'inst/s3_addr_bo_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/s3_addr_bo_reg[10]' (FDE) to 'inst/s3_addr_bo_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/s3_addr_bo_reg[11]' (FDE) to 'inst/s3_addr_bo_reg[12]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/s3_addr_bo_reg[12] )
+INFO: [Synth 8-3886] merging instance 'inst/s2_addr_bo_reg[4]' (FDE) to 'inst/s2_addr_bo_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/s2_addr_bo_reg[5]' (FDE) to 'inst/s2_addr_bo_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/s2_addr_bo_reg[6]' (FDE) to 'inst/s2_addr_bo_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/s2_addr_bo_reg[7]' (FDE) to 'inst/s2_addr_bo_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/s2_addr_bo_reg[8]' (FDE) to 'inst/s2_addr_bo_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/s2_addr_bo_reg[9]' (FDE) to 'inst/s2_addr_bo_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/s2_addr_bo_reg[10]' (FDE) to 'inst/s2_addr_bo_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/s2_addr_bo_reg[11]' (FDE) to 'inst/s2_addr_bo_reg[12]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/s2_addr_bo_reg[12] )
+INFO: [Synth 8-3886] merging instance 'inst/s1_addr_bo_reg[3]' (FDE) to 'inst/s1_addr_bo_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/s1_addr_bo_reg[6]' (FDE) to 'inst/s1_addr_bo_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/s1_addr_bo_reg[7]' (FDE) to 'inst/s1_addr_bo_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/s1_addr_bo_reg[8]' (FDE) to 'inst/s1_addr_bo_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/s1_addr_bo_reg[9]' (FDE) to 'inst/s1_addr_bo_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/s1_addr_bo_reg[10]' (FDE) to 'inst/s1_addr_bo_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/s1_addr_bo_reg[11]' (FDE) to 'inst/s1_addr_bo_reg[12]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/s1_addr_bo_reg[12] )
+INFO: [Synth 8-3332] Sequential element (inst/s1_addr_bo_reg[12]) is unused and will be removed from module uc_system_BRAM_Interconnect_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/s2_addr_bo_reg[12]) is unused and will be removed from module uc_system_BRAM_Interconnect_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/s3_addr_bo_reg[12]) is unused and will be removed from module uc_system_BRAM_Interconnect_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 687.859 ; gain = 453.016
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 688.918 ; gain = 453.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -251,13 +317,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 687.859 ; gain = 453.016
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 691.160 ; gain = 455.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 687.859 ; gain = 453.016
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 691.234 ; gain = 455.891
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -269,7 +335,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 705.805 ; gain = 470.961
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 711.082 ; gain = 475.738
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -293,7 +359,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 705.805 ; gain = 470.961
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 711.082 ; gain = 475.738
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -306,7 +372,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 705.805 ; gain = 470.961
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 711.082 ; gain = 475.738
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -318,25 +384,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 705.805 ; gain = 470.961
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 711.082 ; gain = 475.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 705.805 ; gain = 470.961
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 711.082 ; gain = 475.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 705.805 ; gain = 470.961
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 711.082 ; gain = 475.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 705.805 ; gain = 470.961
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 711.082 ; gain = 475.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -353,35 +419,36 @@ Report Cell Usage:
 |      |Cell |Count |
 +------+-----+------+
 |1     |LUT2 |     2|
-|2     |LUT4 |     4|
-|3     |LUT5 |     4|
-|4     |LUT6 |     5|
-|5     |FDRE |   138|
+|2     |LUT3 |     2|
+|3     |LUT4 |     5|
+|4     |LUT5 |     9|
+|5     |LUT6 |    14|
+|6     |FDRE |   113|
 +------+-----+------+
 
 Report Instance Areas: 
 +------+---------+------------------+------+
 |      |Instance |Module            |Cells |
 +------+---------+------------------+------+
-|1     |top      |                  |   153|
-|2     |  inst   |BRAM_Interconnect |   153|
+|1     |top      |                  |   145|
+|2     |  inst   |BRAM_Interconnect |   145|
 +------+---------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 705.805 ; gain = 470.961
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 711.082 ; gain = 475.738
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 133 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 705.805 ; gain = 152.902
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 705.805 ; gain = 470.961
+Synthesis finished with 0 errors, 0 critical warnings and 102 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 711.082 ; gain = 157.133
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 711.082 ; gain = 475.738
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-27 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+88 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:46 . Memory (MB): peak = 706.738 ; gain = 474.000
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 712.328 ; gain = 479.141
 INFO: [Common 17-1381] The checkpoint 'D:/projects/itmo/io_lab2/io_lab2/io_lab2.runs/uc_system_BRAM_Interconnect_0_0_synth_1/uc_system_BRAM_Interconnect_0_0.dcp' has been generated.
 INFO: [Common 17-1381] The checkpoint 'D:/projects/itmo/io_lab2/io_lab2/io_lab2.runs/uc_system_BRAM_Interconnect_0_0_synth_1/uc_system_BRAM_Interconnect_0_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.219 . Memory (MB): peak = 706.738 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 12 21:18:46 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 712.328 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 16 15:38:39 2017...

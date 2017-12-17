@@ -78,3 +78,18 @@ java.net.SocketException: Connection reset
 	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess$CommandResultsReader.run(XMDJSONProcess.java:332)
 	at java.lang.Thread.run(Thread.java:745)
 17:42:01 ERROR : Zero sized response read from XMD. This indicates a communication error or a programming error.
+14:24:33 INFO  : Registering command handlers for SDK TCF services
+14:24:34 INFO  : Launching XSCT server: xsct.bat -interactive D:\projects\itmo\io_lab2\io_lab2\io_lab2.sdk\temp_xsdb_launch_script.tcl
+14:24:38 INFO  : XSCT server has started successfully.
+14:24:44 INFO  : Successfully done setting XSCT server connection channel  
+14:24:44 INFO  : Successfully done setting SDK workspace  
+14:24:44 INFO  : Processing command line option -hwspec D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf.
+14:24:44 INFO  : Checking for hwspec changes in the project uc_system_wrapper_hw_platform_2.
+14:24:44 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1513509247817,  Project:1513151131544
+14:24:44 INFO  : The hardware specification for project 'uc_system_wrapper_hw_platform_2' is different from D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf.
+14:25:16 INFO  : Copied contents of D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/uc_system_wrapper.hdf into \uc_system_wrapper_hw_platform_2\system.hdf.
+14:25:21 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:25:30 INFO  : 
+14:25:31 INFO  : Updating hardware inferred compiler options for test.
+14:25:31 INFO  : Clearing existing target manager status.
+14:28:08 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

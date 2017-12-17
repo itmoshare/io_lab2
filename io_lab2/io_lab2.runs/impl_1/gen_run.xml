@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1513174688">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1513428106">
   <File Type="PLACE-DCP" Name="uc_system_wrapper_placed.dcp"/>
   <File Type="PA-DCP" Name="uc_system_wrapper.dcp"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="uc_system_wrapper_methodology_drc_opted.rpt"/>
@@ -142,8 +142,8 @@
   <BlockFileSet Type="BlockSrcs" Name="uc_system_xbar_1"/>
   <BlockFileSet Type="BlockSrcs" Name="uc_system_axi_bram_ctrl_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="uc_system_axi_uartlite_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="uc_system_BRAM_Interconnect_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="uc_system_Timer_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="uc_system_Timer_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="uc_system_BRAM_Interconnect_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="uc_system_Output_Compare_0_0"/>
 </GenRun>

@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module Timer #(parameter ADDRESS = 0)(
+module Timer #(parameter [12:0] ADDRESS = 'h0)(
     input clk_i, 
     input rst_i, 
     input [12:0] addr_bi, 
@@ -40,9 +40,9 @@ module Timer #(parameter ADDRESS = 0)(
                 tmr <= 0;
             end else begin 
                 if (we_bi) begin 
-                    if (addr_bi - ADDRESS == 0) tmr <= wrdata_bi;
-                    if (addr_bi - ADDRESS == 4) timer_val_bo <= wrdata_bi;
-                    if (addr_bi - ADDRESS == 8) tconf <= wrdata_bi;
+                    if (addr_bi == ADDRESS) tmr <= wrdata_bi;
+                    if (addr_bi == ADDRESS + 4) timer_val_bo <= wrdata_bi;
+                    if (addr_bi == ADDRESS + 8) tconf <= wrdata_bi;
                 end
                 if (tconf & 'h2) begin
                     if (tconf & 'h1) begin

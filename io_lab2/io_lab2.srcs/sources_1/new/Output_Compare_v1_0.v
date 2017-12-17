@@ -19,9 +19,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module Output_Compare
-    #(parameter ADDRESS = 0)(
+    #(parameter [12:0] ADDRESS = 'h0018)(
     input clk_i, 
     input rst_i, 
     input [12:0] addr_bi, 
@@ -30,8 +29,8 @@ module Output_Compare
     input [3:0] we_bi,
     input [15:0] timer1_val_bi,
     input [15:0] timer2_val_bi,
-    output reg [31:0] rddata_bo,
-    output reg outs
+    output reg [31:0] rddata_bo = 0,
+    output reg outs = 0
     );
     
     reg [31:0] occonf;
@@ -44,37 +43,44 @@ module Output_Compare
     always@(posedge clk_i)
         if (en_i) begin
             if (rst_i) begin 
-                rddata_bo <= 0;
+                rddata_bo = 0;
+                outs = 0;
+                occonf = 0;
+                ocr = 0;
+                last_mode = 0;
+                mode = 0;
+                timer = 0;
             end else begin
                 if (we_bi) begin
-                    if (addr_bi - ADDRESS == 0) occonf <= wrdata_bi;
-                    if (addr_bi - ADDRESS == 4) ocr <= wrdata_bi;
+                    if (addr_bi === ADDRESS) occonf <= wrdata_bi;
+                    if (addr_bi == ADDRESS + 4) ocr <= wrdata_bi;
+                end else begin
+                    mode <= occonf & 'h7;
+                    timer <= occonf & 'h8 == 0 ? timer2_val_bi : timer1_val_bi;
+                    if (mode == 1) begin
+                        if (last_mode != mode) outs <= 0;
+                        if (timer == ocr) outs <= 1;
+                    end
+                    if (mode == 2) begin
+                        if (last_mode != mode) outs <= 1;
+                        if (timer == ocr) outs <= 0;
+                    end
+                    if (mode == 3) begin
+                        if (last_mode != mode) outs <= 0;
+                        if (timer == ocr) outs <= outs == 0 ? 1 : 0;
+                    end
+                    if (mode == 4) begin
+                        if (last_mode != mode) outs <= 0;
+                        if (timer == ocr) outs <= 1;
+                        if (timer > ocr) outs <= 0;
+                    end
+                    if (mode == 5) begin
+                        if (last_mode != mode) outs <= 1;
+                        if (timer == ocr) outs <= 0;
+                        if (timer > ocr) outs <= 1;
+                    end
+                    last_mode = mode;
                 end
-                mode <= occonf & 'h7;
-                timer <= occonf & 'h8 == 0 ? timer1_val_bi : timer2_val_bi;
-                if (mode == 1) begin
-                    if (last_mode != mode) outs <= 0;
-                    if (timer == ocr) outs <= 1;
-                end
-                if (mode == 2) begin
-                    if (last_mode != mode) outs <= 1;
-                    if (timer == ocr) outs <= 0;
-                end
-                if (mode == 3) begin
-                    if (last_mode != mode) outs <= 0;
-                    if (timer == ocr) outs <= outs == 0 ? 1 : 0;
-                end
-                if (mode == 4) begin
-                    if (last_mode != mode) outs <= 0;
-                    if (timer == ocr) outs <= 1;
-                    if (timer > ocr) outs <= 0;
-                end
-                if (mode == 5) begin
-                    if (last_mode != mode) outs <= 1;
-                    if (timer == ocr) outs <= 0;
-                    if (timer > ocr) outs <= 1;
-                end
-                last_mode = mode;
             end
         end
 endmodule

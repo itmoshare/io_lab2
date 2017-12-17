@@ -78,7 +78,7 @@ output wire [31 : 0] rddata_bo;
 output wire outs;
 
   Output_Compare #(
-    .ADDRESS(0)
+    .ADDRESS(32'H00000018)
   ) inst (
     .clk_i(clk_i),
     .rst_i(rst_i),

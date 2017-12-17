@@ -48,16 +48,29 @@
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
+#include "xil_io.h"
 
+
+#define TIMER_ADDRESS 0x41C00000
+#define GPIO_ADDRESS  0x40000000
+#define AXI_UARLITE_ADDRESS 0x40600000
+#define MY_BASE_ADDRESS 0xC0000000
 
 int main()
 {
     init_platform();
 
-    //print("Hello World\n\r");
-    char t = inbyte();
+	// Output Compare start
+    Xil_Out32(MY_BASE_ADDRESS + 0x18, 0x4);
+	Xil_Out32(MY_BASE_ADDRESS + 0x1C, 500);
+	// Timer 1 start
+	Xil_Out32(MY_BASE_ADDRESS + 0x0, 1000);
+	Xil_Out32(MY_BASE_ADDRESS + 0x8, 0x2);
+
+    //print("N");
+    //char t = inbyte();
     //char t = 0x55;
-    outbyte(t);
+    //outbyte(t);
 
     cleanup_platform();
     return 0;

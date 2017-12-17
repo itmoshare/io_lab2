@@ -252,6 +252,8 @@ proc create_root_design { parentCell } {
 CONFIG.FREQ_HZ {100000000} \
 CONFIG.PHASE {0.000} \
  ] $clock_rtl
+  set generateout0 [ create_bd_port -dir O generateout0 ]
+  set pwm0 [ create_bd_port -dir O pwm0 ]
   set reset_rtl [ create_bd_port -dir I -type rst reset_rtl ]
   set_property -dict [ list \
 CONFIG.POLARITY {ACTIVE_HIGH} \
@@ -309,7 +311,7 @@ CONFIG.addr3_1 {23} \
      return 1
    }
     set_property -dict [ list \
-CONFIG.ADDRESS {12} \
+CONFIG.ADDRESS {0x0000000C} \
  ] $Timer_1
 
   # Create instance: axi_bram_ctrl_0, and set properties
@@ -397,6 +399,8 @@ CONFIG.C_I_LMB {1} \
   connect_bd_net -net axi_bram_ctrl_0_bram_rst_a [get_bd_pins BRAM_Interconnect_0/rst_i] [get_bd_pins Output_Compare_0/rst_i] [get_bd_pins Timer_0/rst_i] [get_bd_pins Timer_1/rst_i] [get_bd_pins axi_bram_ctrl_0/bram_rst_a]
   connect_bd_net -net axi_bram_ctrl_0_bram_we_a [get_bd_pins BRAM_Interconnect_0/we_bi] [get_bd_pins axi_bram_ctrl_0/bram_we_a]
   connect_bd_net -net axi_bram_ctrl_0_bram_wrdata_a [get_bd_pins BRAM_Interconnect_0/wrdata_bi] [get_bd_pins axi_bram_ctrl_0/bram_wrdata_a]
+  connect_bd_net -net axi_timer_generateout0 [get_bd_ports generateout0] [get_bd_pins axi_timer/generateout0]
+  connect_bd_net -net axi_timer_pwm0 [get_bd_ports pwm0] [get_bd_pins axi_timer/pwm0]
   connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins rst_clk_100M/dcm_locked]
   connect_bd_net -net clock_rtl_1 [get_bd_ports clock_rtl] [get_bd_pins clk_wiz/clk_in1]
   connect_bd_net -net microblaze_core_Clk [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_gpio/s_axi_aclk] [get_bd_pins axi_interconnect/ACLK] [get_bd_pins axi_interconnect/M00_ACLK] [get_bd_pins axi_interconnect/M01_ACLK] [get_bd_pins axi_interconnect/M02_ACLK] [get_bd_pins axi_interconnect/M03_ACLK] [get_bd_pins axi_interconnect/S00_ACLK] [get_bd_pins axi_timer/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins microblaze_core/Clk] [get_bd_pins microblaze_core_local_memory/LMB_Clk] [get_bd_pins rst_clk_100M/slowest_sync_clk]

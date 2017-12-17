@@ -37,37 +37,53 @@ module BRAM_Interconnect
     input [31:0] s1_rddata_bi, 
     input [31:0] s2_rddata_bi, 
     input [31:0] s3_rddata_bi, 
-    output reg [31:0] rddata_bo, 
-    output reg [12:0] s1_addr_bo, 
-    output reg [31:0] s1_wrdata_bo, 
+    output reg [31:0] rddata_bo = 0, 
+    output reg [12:0] s1_addr_bo = 0, 
+    output reg [31:0] s1_wrdata_bo = 0, 
     output reg s1_en_o = 1, 
-    output reg [3:0] s1_we_bo, 
-    output reg [12:0] s2_addr_bo, 
-    output reg [31:0] s2_wrdata_bo, 
+    output reg [3:0] s1_we_bo = 0, 
+    output reg [12:0] s2_addr_bo = 0, 
+    output reg [31:0] s2_wrdata_bo = 0, 
     output reg s2_en_o = 1, 
-    output reg [3:0] s2_we_bo, 
-    output reg [12:0] s3_addr_bo, 
-    output reg [31:0] s3_wrdata_bo, 
+    output reg [3:0] s2_we_bo = 0, 
+    output reg [12:0] s3_addr_bo = 0, 
+    output reg [31:0] s3_wrdata_bo = 0, 
     output reg s3_en_o = 1, 
-    output reg [3:0] s3_we_bo
+    output reg [3:0] s3_we_bo = 0
     );
     
     always@(posedge clk_i)
         if (en_i) begin
-            if (addr_bi >= addr1_0 && addr_bi <= addr1_1) begin
-                s1_we_bo <= 1; s2_we_bo <= 0; s3_we_bo <= 0;
-                s1_addr_bo <= addr_bi;
-                s1_wrdata_bo <= wrdata_bi;
-            end
-            if (addr_bi >= addr2_0 && addr_bi <= addr2_1) begin
-                s1_we_bo <= 0; s2_we_bo <= 1; s3_we_bo <= 0;
-                s2_addr_bo <= addr_bi;
-                s2_wrdata_bo <= wrdata_bi;
-            end
-            if (addr_bi >= addr3_0 && addr_bi <= addr3_1) begin
-                s1_we_bo <= 0; s2_we_bo <= 0; s3_we_bo <= 1;
-                s3_addr_bo <= addr_bi;
-                s3_wrdata_bo <= wrdata_bi;
+            if (rst_i) begin 
+                rddata_bo = 0;
+                s1_addr_bo = 0; 
+                s1_wrdata_bo = 0; 
+                s1_en_o = 1;
+                s1_we_bo = 0; 
+                s2_addr_bo = 0; 
+                s2_wrdata_bo = 0; 
+                s2_en_o = 1; 
+                s2_we_bo = 0; 
+                s3_addr_bo = 0; 
+                s3_wrdata_bo = 0; 
+                s3_en_o = 1; 
+                s3_we_bo = 0;
+            end else begin
+                if (addr_bi >= addr1_0 && addr_bi <= addr1_1) begin
+                    s1_we_bo <= 1; s2_we_bo <= 0; s3_we_bo <= 0;
+                    s1_addr_bo <= addr_bi;
+                    s1_wrdata_bo <= wrdata_bi;
+                end
+                if (addr_bi >= addr2_0 && addr_bi <= addr2_1) begin
+                    s1_we_bo <= 0; s2_we_bo <= 1; s3_we_bo <= 0;
+                    s2_addr_bo <= addr_bi;
+                    s2_wrdata_bo <= wrdata_bi;
+                end
+                if (addr_bi >= addr3_0 && addr_bi <= addr3_1) begin
+                    s1_we_bo <= 0; s2_we_bo <= 0; s3_we_bo <= 1;
+                    s3_addr_bo <= addr_bi;
+                    s3_wrdata_bo <= wrdata_bi;
+                end
             end
         end
 endmodule

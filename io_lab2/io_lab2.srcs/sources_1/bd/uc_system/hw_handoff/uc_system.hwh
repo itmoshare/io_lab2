@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 13 15:45:29 2017" VIVADOVERSION="2017.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec 18 01:10:25 2017" VIVADOVERSION="2017.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="uc_system" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -16,6 +16,16 @@
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clock_rtl" SIGIS="clk" SIGNAME="External_Ports_clock_rtl">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz" PORT="clk_in1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pwm0" SIGIS="undef" SIGNAME="axi_timer_pwm0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_timer" PORT="pwm0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="generateout0" SIGIS="undef" SIGNAME="axi_timer_generateout0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_timer" PORT="generateout0"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -164,7 +174,7 @@
     <MODULE FULLNAME="/Output_Compare_0" HWVERSION="1.0" INSTANCE="Output_Compare_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Output_Compare" VLNV="xilinx.com:module_ref:Output_Compare:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="ADDRESS" VALUE="0"/>
+        <PARAMETER NAME="ADDRESS" VALUE="0x00000018"/>
         <PARAMETER NAME="Component_Name" VALUE="uc_system_Output_Compare_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -225,7 +235,7 @@
     <MODULE FULLNAME="/Timer_0" HWVERSION="1.0" INSTANCE="Timer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Timer" VLNV="xilinx.com:module_ref:Timer:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="ADDRESS" VALUE="0"/>
+        <PARAMETER NAME="ADDRESS" VALUE="0x00000000"/>
         <PARAMETER NAME="Component_Name" VALUE="uc_system_Timer_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -276,7 +286,7 @@
     <MODULE FULLNAME="/Timer_1" HWVERSION="1.0" INSTANCE="Timer_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Timer" VLNV="xilinx.com:module_ref:Timer:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="ADDRESS" VALUE="12"/>
+        <PARAMETER NAME="ADDRESS" VALUE="0x0000000C"/>
         <PARAMETER NAME="Component_Name" VALUE="uc_system_Timer_1_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -838,17 +848,17 @@
         <PORT DIR="O" NAME="bram_rst_a" SIGIS="rst" SIGNAME="axi_bram_ctrl_0_bram_rst_a">
           <CONNECTIONS>
             <CONNECTION INSTANCE="BRAM_Interconnect_0" PORT="rst_i"/>
+            <CONNECTION INSTANCE="Output_Compare_0" PORT="rst_i"/>
             <CONNECTION INSTANCE="Timer_0" PORT="rst_i"/>
             <CONNECTION INSTANCE="Timer_1" PORT="rst_i"/>
-            <CONNECTION INSTANCE="Output_Compare_0" PORT="rst_i"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="bram_clk_a" SIGIS="clk" SIGNAME="axi_bram_ctrl_0_bram_clk_a">
           <CONNECTIONS>
             <CONNECTION INSTANCE="BRAM_Interconnect_0" PORT="clk_i"/>
+            <CONNECTION INSTANCE="Output_Compare_0" PORT="clk_i"/>
             <CONNECTION INSTANCE="Timer_0" PORT="clk_i"/>
             <CONNECTION INSTANCE="Timer_1" PORT="clk_i"/>
-            <CONNECTION INSTANCE="Output_Compare_0" PORT="clk_i"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="bram_en_a" SIGIS="undef" SIGNAME="axi_bram_ctrl_0_bram_en_a">
@@ -2694,9 +2704,17 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="capturetrig1" SIGIS="undef"/>
-        <PORT DIR="O" NAME="generateout0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="generateout0" SIGIS="undef" SIGNAME="axi_timer_generateout0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="generateout0"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="generateout1" SIGIS="undef"/>
-        <PORT DIR="O" NAME="pwm0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="pwm0" SIGIS="undef" SIGNAME="axi_timer_pwm0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pwm0"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="interrupt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
         <PORT DIR="I" NAME="freeze" SIGIS="undef"/>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">

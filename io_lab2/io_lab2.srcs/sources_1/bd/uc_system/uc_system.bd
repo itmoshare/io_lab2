@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x5B4C76BD365B529" bd:device="xc7a100tcsg324-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.2" bd:top="uc_system" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xB86FB499C99B39B5" bd:device="xc7a100tcsg324-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.2" bd:top="uc_system" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -123,6 +123,18 @@
             <spirit:direction>in</spirit:direction>
           </spirit:wire>
         </spirit:port>
+        <spirit:port>
+          <spirit:name>pwm0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>generateout0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -223,6 +235,17 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
+        <spirit:instanceName>Output_Compare_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="Output_Compare" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">uc_system_Output_Compare_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Output_Compare</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
         <spirit:instanceName>Timer_0</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="Timer" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -238,19 +261,8 @@
         <spirit:componentRef spirit:library="module_ref" spirit:name="Timer" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">uc_system_Timer_1_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="ADDRESS">12</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="ADDRESS">0x0000000C</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Timer</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>Output_Compare_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="Output_Compare" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">uc_system_Output_Compare_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Output_Compare</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
@@ -365,17 +377,17 @@
         <spirit:name>axi_bram_ctrl_0_bram_rst_a</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="bram_rst_a"/>
         <spirit:internalPortReference spirit:componentRef="BRAM_Interconnect_0" spirit:portRef="rst_i"/>
+        <spirit:internalPortReference spirit:componentRef="Output_Compare_0" spirit:portRef="rst_i"/>
         <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="rst_i"/>
         <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="rst_i"/>
-        <spirit:internalPortReference spirit:componentRef="Output_Compare_0" spirit:portRef="rst_i"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>axi_bram_ctrl_0_bram_clk_a</spirit:name>
         <spirit:internalPortReference spirit:componentRef="axi_bram_ctrl_0" spirit:portRef="bram_clk_a"/>
         <spirit:internalPortReference spirit:componentRef="BRAM_Interconnect_0" spirit:portRef="clk_i"/>
+        <spirit:internalPortReference spirit:componentRef="Output_Compare_0" spirit:portRef="clk_i"/>
         <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="clk_i"/>
         <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="clk_i"/>
-        <spirit:internalPortReference spirit:componentRef="Output_Compare_0" spirit:portRef="clk_i"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>axi_bram_ctrl_0_bram_wrdata_a</spirit:name>
@@ -486,6 +498,16 @@
         <spirit:name>Output_Compare_0_outs</spirit:name>
         <spirit:internalPortReference spirit:componentRef="Output_Compare_0" spirit:portRef="outs"/>
         <spirit:internalPortReference spirit:componentRef="axi_timer" spirit:portRef="capturetrig0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>axi_timer_pwm0</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_timer" spirit:portRef="pwm0"/>
+        <spirit:externalPortReference spirit:portRef="pwm0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>axi_timer_generateout0</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_timer" spirit:portRef="generateout0"/>
+        <spirit:externalPortReference spirit:portRef="generateout0"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
@@ -2227,12 +2249,6 @@
         <spirit:executableImage spirit:id="test.elf" spirit:imageType="elf">
           <spirit:name>D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/test/Debug/test.elf</spirit:name>
           <spirit:fileSetRefGroup>
-            <spirit:fileSetRef>
-              <spirit:localName>sim_1</spirit:localName>
-            </spirit:fileSetRef>
-            <spirit:fileSetRef>
-              <spirit:localName>sources_1</spirit:localName>
-            </spirit:fileSetRef>
             <spirit:fileSetRef>
               <spirit:localName>sim_1</spirit:localName>
             </spirit:fileSetRef>
