@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Sat Dec 16 15:43:30 2017
+| Date         : Mon Dec 18 15:22:13 2017
 | Host         : DESKTOP-3JQ772D running 64-bit major release  (build 9200)
 | Command      : report_drc -file uc_system_wrapper_drc_routed.rpt -pb uc_system_wrapper_drc_routed.pb -rpx uc_system_wrapper_drc_routed.rpx
 | Design       : uc_system_wrapper
@@ -20,18 +20,16 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: checkpoint_uc_system_wrapper
+          Floorplan: design_1
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 4
-+-----------+----------+-----------------------------------------------------+------------+
-| Rule      | Severity | Description                                         | Violations |
-+-----------+----------+-----------------------------------------------------+------------+
-| CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDCN-1569 | Warning  | LUT equation term check                             | 2          |
-| RTSTAT-10 | Warning  | No routable loads                                   | 1          |
-+-----------+----------+-----------------------------------------------------+------------+
+             Violations found: 1
++----------+----------+-----------------------------------------------------+------------+
+| Rule     | Severity | Description                                         | Violations |
++----------+----------+-----------------------------------------------------+------------+
+| CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
++----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -46,21 +44,6 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
-Related violations: <none>
-
-PDCN-1569#1 Warning
-LUT equation term check  
-Used physical LUT pin 'A5' of cell uc_system_i/microblaze_core/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Using_DAXI_ALU_Carry.direct_lut_INST/Using_FPGA.Native/LUT5 (in uc_system_i/microblaze_core/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Using_DAXI_ALU_Carry.direct_lut_INST/Using_FPGA.Native macro) is not included in the LUT equation: 'O5=(A1)+((~A1)*A2)+((~A1)*(~A2)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-Related violations: <none>
-
-PDCN-1569#2 Warning
-LUT equation term check  
-Used physical LUT pin 'A5' of cell uc_system_i/microblaze_core/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Using_DAXI_ALU_Carry.direct_lut_INST/Using_FPGA.Native/LUT6 (in uc_system_i/microblaze_core/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Using_DAXI_ALU_Carry.direct_lut_INST/Using_FPGA.Native macro) is not included in the LUT equation: 'O6=(A1*A4*(~A6))+(A1*(~A4))+((~A1)*A2*A4*(~A6))+((~A1)*A2*(~A4))+((~A1)*(~A2)*A3*A4*(~A6))+((~A1)*(~A2)*A3*(~A4))+((~A1)*(~A2)*(~A3)*(~A4)*A6)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-Related violations: <none>
-
-RTSTAT-10#1 Warning
-No routable loads  
-691 net(s) have no routable loads. The problem bus(es) and/or net(s) are uc_system_i/microblaze_core_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_n_87, uc_system_i/microblaze_core_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_n_87, uc_system_i/microblaze_core_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_n_88, uc_system_i/microblaze_core_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_n_88, uc_system_i/microblaze_core_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_n_91, uc_system_i/microblaze_core_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_n_91, uc_system_i/microblaze_core_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_n_92, uc_system_i/microblaze_core_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_n_92, uc_system_i/microblaze_core/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[0].ram32m_i/Using_FPGA.Native/DOD0, uc_system_i/microblaze_core/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[2].ram32m_i/Using_FPGA.Native/DOD0, uc_system_i/microblaze_core/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[7].ram32m_i/Using_FPGA.Native/DOD0, uc_system_i/microblaze_core/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[15].ram32m_i/Using_FPGA.Native/DOD0, uc_system_i/microblaze_core/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[14].ram32m_i/Using_FPGA.Native/DOD0, uc_system_i/microblaze_core/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[9].ram32m_i/Using_FPGA.Native/DOD0, uc_system_i/microblaze_core/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[4].ram32m_i/Using_FPGA.Native/DOD0 (the first 15 of 314 listed).
 Related violations: <none>
 
 

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Sat Dec 16 15:43:34 2017
+| Date             : Mon Dec 18 15:22:17 2017
 | Host             : DESKTOP-3JQ772D running 64-bit major release  (build 9200)
 | Command          : report_power -file uc_system_wrapper_power_routed.rpt -pb uc_system_wrapper_power_summary_routed.pb -rpx uc_system_wrapper_power_routed.rpx
 | Design           : uc_system_wrapper
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 0.243  |
-| Dynamic (W)              | 0.145  |
+| Total On-Chip Power (W)  | 0.228  |
+| Dynamic (W)              | 0.131  |
 | Device Static (W)        | 0.098  |
 | Effective TJA (C/W)      | 4.6    |
-| Max Ambient (C)          | 83.9   |
-| Junction Temperature (C) | 26.1   |
+| Max Ambient (C)          | 84.0   |
+| Junction Temperature (C) | 26.0   |
 | Confidence Level         | Medium |
 | Setting File             | ---    |
 | Simulation Activity File | ---    |
@@ -49,21 +49,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.011 |        5 |       --- |             --- |
-| Slice Logic              |     0.007 |     5368 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     1980 |     63400 |            3.12 |
+| Clocks                   |     0.008 |        5 |       --- |             --- |
+| Slice Logic              |     0.006 |     4105 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     1753 |     63400 |            2.76 |
 |   LUT as Distributed RAM |    <0.001 |       64 |     19000 |            0.34 |
-|   Register               |    <0.001 |     2246 |    126800 |            1.77 |
-|   CARRY4                 |    <0.001 |       89 |     15850 |            0.56 |
-|   F7/F8 Muxes            |    <0.001 |      111 |     63400 |            0.18 |
-|   LUT as Shift Register  |    <0.001 |       51 |     19000 |            0.27 |
-|   Others                 |    <0.001 |      369 |       --- |             --- |
-| Signals                  |     0.010 |     3527 |       --- |             --- |
-| Block RAM                |     0.001 |        2 |       135 |            1.48 |
+|   Register               |    <0.001 |     1419 |    126800 |            1.12 |
+|   CARRY4                 |    <0.001 |       92 |     15850 |            0.58 |
+|   F7/F8 Muxes            |    <0.001 |      110 |     63400 |            0.17 |
+|   LUT as Shift Register  |    <0.001 |       50 |     19000 |            0.26 |
+|   Others                 |    <0.001 |      233 |       --- |             --- |
+| Signals                  |     0.008 |     2921 |       --- |             --- |
+| Block RAM                |     0.002 |        2 |       135 |            1.48 |
 | MMCM                     |     0.106 |        1 |         6 |           16.67 |
-| I/O                      |     0.010 |       22 |       210 |           10.48 |
+| I/O                      |    <0.001 |       22 |       210 |           10.48 |
 | Static Power             |     0.098 |          |           |                 |
-| Total                    |     0.243 |          |           |                 |
+| Total                    |     0.228 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.045 |       0.030 |      0.015 |
+| Vccint    |       1.000 |     0.040 |       0.025 |      0.015 |
 | Vccaux    |       1.800 |     0.077 |       0.059 |      0.018 |
-| Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |
+| Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -144,26 +144,24 @@ Table of Contents
 +---------------------------------------------------------------------------------+-----------+
 | Name                                                                            | Power (W) |
 +---------------------------------------------------------------------------------+-----------+
-| uc_system_wrapper                                                               |     0.145 |
-|   uc_system_i                                                                   |     0.135 |
+| uc_system_wrapper                                                               |     0.131 |
+|   uc_system_i                                                                   |     0.130 |
 |     BRAM_Interconnect_0                                                         |    <0.001 |
 |       inst                                                                      |    <0.001 |
 |     Output_Compare_0                                                            |    <0.001 |
 |       inst                                                                      |    <0.001 |
 |     Timer_0                                                                     |    <0.001 |
 |       inst                                                                      |    <0.001 |
-|     Timer_1                                                                     |    <0.001 |
-|       inst                                                                      |    <0.001 |
-|     axi_bram_ctrl_0                                                             |     0.002 |
-|       U0                                                                        |     0.002 |
-|         gext_inst.abcv4_0_ext_inst                                              |     0.002 |
-|           GEN_AXI4.I_FULL_AXI                                                   |     0.002 |
+|     axi_bram_ctrl_0                                                             |     0.001 |
+|       U0                                                                        |     0.001 |
+|         gext_inst.abcv4_0_ext_inst                                              |     0.001 |
+|           GEN_AXI4.I_FULL_AXI                                                   |     0.001 |
 |             GEN_ARB.I_SNG_PORT                                                  |    <0.001 |
-|             I_RD_CHNL                                                           |     0.001 |
+|             I_RD_CHNL                                                           |    <0.001 |
 |               I_WRAP_BRST                                                       |    <0.001 |
 |             I_WR_CHNL                                                           |    <0.001 |
 |               BID_FIFO                                                          |    <0.001 |
-|               I_WRAP_BRST                                                       |    <0.001 |
+|               I_WRAP_BRST                                                       |     0.000 |
 |     axi_gpio                                                                    |    <0.001 |
 |       U0                                                                        |    <0.001 |
 |         AXI_LITE_IPIF_I                                                         |    <0.001 |
@@ -182,8 +180,8 @@ Table of Contents
 |             reg_slice_r                                                         |    <0.001 |
 |             splitter_ar                                                         |    <0.001 |
 |             splitter_aw                                                         |    <0.001 |
-|     axi_timer                                                                   |     0.003 |
-|       U0                                                                        |     0.003 |
+|     axi_timer                                                                   |     0.004 |
+|       U0                                                                        |     0.004 |
 |         AXI4_LITE_I                                                             |    <0.001 |
 |           I_SLAVE_ATTACHMENT                                                    |    <0.001 |
 |             I_DECODER                                                           |    <0.001 |
@@ -193,15 +191,14 @@ Table of Contents
 |               MEM_DECODE_GEN[0].PER_CE_GEN[5].MULTIPLE_CES_THIS_CS_GEN.CE_I     |    <0.001 |
 |               MEM_DECODE_GEN[0].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I     |    <0.001 |
 |               MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I     |    <0.001 |
-|         TC_CORE_I                                                               |     0.003 |
-|           COUNTER_0_I                                                           |     0.001 |
-|             COUNTER_I                                                           |    <0.001 |
-|           GEN_SECOND_TIMER.COUNTER_1_I                                          |     0.001 |
+|         TC_CORE_I                                                               |     0.004 |
+|           COUNTER_0_I                                                           |     0.002 |
 |             COUNTER_I                                                           |     0.001 |
+|           GEN_SECOND_TIMER.COUNTER_1_I                                          |     0.002 |
+|             COUNTER_I                                                           |     0.002 |
 |           READ_MUX_I                                                            |    <0.001 |
 |           TIMER_CONTROL_I                                                       |    <0.001 |
 |             INPUT_DOUBLE_REGS                                                   |    <0.001 |
-|             INPUT_DOUBLE_REGS2                                                  |    <0.001 |
 |             INPUT_DOUBLE_REGS3                                                  |    <0.001 |
 |     axi_uartlite_0                                                              |    <0.001 |
 |       U0                                                                        |    <0.001 |
@@ -227,19 +224,17 @@ Table of Contents
 |                 DYNSHREG_F_I                                                    |    <0.001 |
 |     clk_wiz                                                                     |     0.106 |
 |       inst                                                                      |     0.106 |
-|     microblaze_core                                                             |     0.019 |
-|       U0                                                                        |     0.019 |
-|         MicroBlaze_Core_I                                                       |     0.017 |
-|           Performance.Core                                                      |     0.017 |
-|             Data_Flow_I                                                         |     0.007 |
+|     microblaze_core                                                             |     0.012 |
+|       U0                                                                        |     0.012 |
+|         MicroBlaze_Core_I                                                       |     0.012 |
+|           Performance.Core                                                      |     0.012 |
+|             Data_Flow_I                                                         |     0.006 |
 |               ALU_I                                                             |    <0.001 |
-|                 Use_Carry_Decoding.CarryIn_MUXCY                                |     0.000 |
 |                 Using_FPGA.ALL_Bits[0].ALU_Bit_I1                               |    <0.001 |
 |                   Last_Bit.I_ALU_LUT_2                                          |    <0.001 |
 |                   Last_Bit.I_ALU_LUT_V5                                         |    <0.001 |
 |                   Last_Bit.MULT_AND_I                                           |    <0.001 |
 |                   Last_Bit.MUXCY_XOR_I                                          |     0.000 |
-|                   Last_Bit.Pre_MUXCY_I                                          |     0.000 |
 |                 Using_FPGA.ALL_Bits[10].ALU_Bit_I1                              |    <0.001 |
 |                   Not_Last_Bit.I_ALU_LUT_V5                                     |    <0.001 |
 |                     Using_FPGA.Native                                           |    <0.001 |
@@ -364,8 +359,8 @@ Table of Contents
 |                   Not_Last_Bit.I_ALU_LUT_V5                                     |    <0.001 |
 |                     Using_FPGA.Native                                           |    <0.001 |
 |                   Not_Last_Bit.MUXCY_XOR_I                                      |     0.000 |
-|               Byte_Doublet_Handle_gti_I                                         |     0.001 |
-|               Data_Flow_Logic_I                                                 |     0.001 |
+|               Byte_Doublet_Handle_gti_I                                         |    <0.001 |
+|               Data_Flow_Logic_I                                                 |    <0.001 |
 |                 Gen_Bits[0].MEM_EX_Result_Inst                                  |    <0.001 |
 |                 Gen_Bits[10].MEM_EX_Result_Inst                                 |    <0.001 |
 |                 Gen_Bits[11].MEM_EX_Result_Inst                                 |    <0.001 |
@@ -468,112 +463,10 @@ Table of Contents
 |               Using_DAXI_ALU_Carry.Direct_MUXCY_I                               |    <0.001 |
 |               Using_DAXI_ALU_Carry.Post_MUXCY_I                                 |     0.000 |
 |               Using_DAXI_ALU_Carry.direct_lut_INST                              |     0.000 |
-|                 Using_FPGA.Native                                               |     0.000 |
 |               Zero_Detect_I                                                     |    <0.001 |
 |                 Part_Of_Zero_Carry_Start                                        |    <0.001 |
-|                 Zero_Detecting[0].I_Part_Of_Zero_Detect                         |     0.000 |
-|                 Zero_Detecting[1].I_Part_Of_Zero_Detect                         |     0.000 |
 |                 Zero_Detecting[2].I_Part_Of_Zero_Detect                         |     0.000 |
 |                 Zero_Detecting[3].I_Part_Of_Zero_Detect                         |    <0.001 |
-|                 Zero_Detecting[4].I_Part_Of_Zero_Detect                         |     0.000 |
-|                 Zero_Detecting[5].I_Part_Of_Zero_Detect                         |     0.000 |
-|               exception_registers_I1                                            |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[0].I_RET_ADDR_WB                   |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[0].WB_PC_FDE                       |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[10].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[10].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[11].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[11].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[12].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[12].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[13].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[13].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[14].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[14].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[15].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[15].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[16].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[16].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[17].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[17].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[18].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[18].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[19].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[19].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[1].I_RET_ADDR_WB                   |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[1].WB_PC_FDE                       |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[20].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[20].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[21].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[21].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[22].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[22].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[23].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[23].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[24].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[24].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[25].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[25].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[26].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[26].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[27].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[27].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[28].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[28].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[29].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[29].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[2].I_RET_ADDR_WB                   |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[2].WB_PC_FDE                       |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[30].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[30].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[31].I_RET_ADDR_WB                  |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[31].WB_PC_FDE                      |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[3].I_RET_ADDR_WB                   |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[3].WB_PC_FDE                       |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[4].I_RET_ADDR_WB                   |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[4].WB_PC_FDE                       |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[5].I_RET_ADDR_WB                   |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[5].WB_PC_FDE                       |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[6].I_RET_ADDR_WB                   |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[6].WB_PC_FDE                       |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[7].I_RET_ADDR_WB                   |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[7].WB_PC_FDE                       |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[8].I_RET_ADDR_WB                   |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[8].WB_PC_FDE                       |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[9].I_RET_ADDR_WB                   |    <0.001 |
-|                   Using_FPGA.Native                                             |    <0.001 |
-|                 Using_FPGA_LUT6.Gen_Ret_Addr[9].WB_PC_FDE                       |    <0.001 |
 |               msr_reg_i                                                         |    <0.001 |
 |                 MEM_MSR_Bits[28].Using_FDR.MSR_I                                |    <0.001 |
 |                 MEM_MSR_Bits[29].Using_FDR.MSR_I                                |    <0.001 |
@@ -581,8 +474,8 @@ Table of Contents
 |                 OF_EX_MSR_Bits[28].Using_FDR.MSR_ex_I                           |    <0.001 |
 |                 OF_EX_MSR_Bits[29].Using_FDR.MSR_ex_I                           |    <0.001 |
 |                 OF_EX_MSR_Bits[30].Using_FDR.MSR_ex_I                           |    <0.001 |
-|             Decode_I                                                            |     0.008 |
-|               PC_Module_I                                                       |     0.001 |
+|             Decode_I                                                            |     0.006 |
+|               PC_Module_I                                                       |    <0.001 |
 |                 Instruction_Prefetch_Mux[0].Gen_Instr_DFF                       |    <0.001 |
 |                 Instruction_Prefetch_Mux[0].PC_Mux_MUXF7                        |    <0.001 |
 |                 Instruction_Prefetch_Mux[10].Gen_Instr_DFF                      |    <0.001 |
@@ -677,7 +570,7 @@ Table of Contents
 |                 Using_FPGA.Incr_PC[7].MUXCY_XOR_I                               |    <0.001 |
 |                 Using_FPGA.Incr_PC[8].MUXCY_XOR_I                               |     0.000 |
 |                 Using_FPGA.Incr_PC[9].MUXCY_XOR_I                               |     0.000 |
-|               PreFetch_Buffer_I1                                                |     0.004 |
+|               PreFetch_Buffer_I1                                                |     0.003 |
 |                 Gen_Mux_Select_LUT6[1].Gen_Sel_DFF                              |    <0.001 |
 |                 Gen_Mux_Select_LUT6[1].Mux_Select_LUT6                          |    <0.001 |
 |                 Gen_Mux_Select_LUT6[2].Gen_Sel_DFF                              |    <0.001 |
@@ -841,31 +734,29 @@ Table of Contents
 |             mem_databus_ready_sel_carry_or                                      |    <0.001 |
 |               MUXCY_I                                                           |    <0.001 |
 |           Reset_DFF                                                             |    <0.001 |
-|           Using_Async_Wakeup_0.Wakeup_DFF                                       |    <0.001 |
 |           Using_Async_Wakeup_1.Wakeup_DFF                                       |    <0.001 |
 |     microblaze_core_local_memory                                                |     0.002 |
 |       dlmb_bram_if_cntlr                                                        |    <0.001 |
 |         U0                                                                      |    <0.001 |
-|       dlmb_v10                                                                  |    <0.001 |
-|         U0                                                                      |    <0.001 |
+|       dlmb_v10                                                                  |     0.000 |
+|         U0                                                                      |     0.000 |
 |       ilmb_bram_if_cntlr                                                        |    <0.001 |
 |         U0                                                                      |    <0.001 |
-|       ilmb_v10                                                                  |    <0.001 |
-|         U0                                                                      |    <0.001 |
+|       ilmb_v10                                                                  |     0.000 |
+|         U0                                                                      |     0.000 |
 |       lmb_bram                                                                  |     0.002 |
 |         U0                                                                      |     0.002 |
 |           inst_blk_mem_gen                                                      |     0.002 |
 |             gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen               |     0.002 |
 |               valid.cstr                                                        |     0.002 |
-|                 ramloop[0].ram.r                                                |    <0.001 |
-|                   prim_noinit.ram                                               |    <0.001 |
-|                 ramloop[1].ram.r                                                |    <0.001 |
-|                   prim_noinit.ram                                               |    <0.001 |
+|                 ramloop[0].ram.r                                                |     0.001 |
+|                   prim_noinit.ram                                               |     0.001 |
+|                 ramloop[1].ram.r                                                |     0.001 |
+|                   prim_noinit.ram                                               |     0.001 |
 |     rst_clk_100M                                                                |    <0.001 |
 |       U0                                                                        |    <0.001 |
 |         EXT_LPF                                                                 |    <0.001 |
 |           ACTIVE_HIGH_EXT.ACT_HI_EXT                                            |    <0.001 |
-|           ACTIVE_LOW_AUX.ACT_LO_AUX                                             |    <0.001 |
 |         SEQ                                                                     |    <0.001 |
 |           SEQ_COUNTER                                                           |    <0.001 |
 +---------------------------------------------------------------------------------+-----------+
