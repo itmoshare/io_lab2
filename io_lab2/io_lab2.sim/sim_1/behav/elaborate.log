@@ -3,8 +3,8 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: D:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 206035205e6a4252becb06e547722e01 --debug typical --relax --mt 2 -L xil_defaultlib -L microblaze_v10_0_3 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_11 -L axi_lite_ipif_v3_0_4 -L lib_pkg_v1_0_2 -L axi_timer_v2_0_15 -L interrupt_control_v3_1_4 -L axi_gpio_v2_0_15 -L lmb_v10_v3_0_9 -L lmb_bram_if_cntlr_v4_0_12 -L blk_mem_gen_v8_3_6 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_13 -L fifo_generator_v13_1_4 -L axi_data_fifo_v2_1_12 -L axi_crossbar_v2_1_14 -L axi_bram_ctrl_v4_0_11 -L lib_srl_fifo_v1_0_2 -L axi_uartlite_v2_0_17 -L axi_protocol_converter_v2_1_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sim_tb_behav xil_defaultlib.sim_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 12 for port m_axi_arprot [D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/hdl/uc_system.v:2363]
-WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 12 for port m_axi_awprot [D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/hdl/uc_system.v:2367]
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 12 for port m_axi_arprot [D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/hdl/uc_system.v:2369]
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 12 for port m_axi_awprot [D:/projects/itmo/io_lab2/io_lab2/io_lab2.ip_user_files/bd/uc_system/hdl/uc_system.v:2373]
 WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.2/nightly/2017_06_15_1909853/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
 Completed static elaboration
 Starting simulation data flow analysis
@@ -34,7 +34,7 @@ Compiling module xil_defaultlib.BRAM_Interconnect(addr1_0=24,add...
 Compiling module xil_defaultlib.uc_system_BRAM_Interconnect_0_0
 Compiling module xil_defaultlib.Output_Compare
 Compiling module xil_defaultlib.uc_system_Output_Compare_0_0
-Compiling module xil_defaultlib.Timer(ADDRESS=13'b0)
+Compiling module xil_defaultlib.Timer
 Compiling module xil_defaultlib.uc_system_Timer_0_1
 Compiling module xil_defaultlib.Timer(ADDRESS=13'b01100)
 Compiling module xil_defaultlib.uc_system_Timer_1_0

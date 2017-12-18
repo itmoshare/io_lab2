@@ -27,7 +27,8 @@ module Timer #(parameter [12:0] ADDRESS = 'h0)(
     input en_i, 
     input [3:0] we_bi, 
     output reg [31:0] rddata_bo = 0, 
-    output reg [15:0] timer_val_bo = 0 
+    output reg [15:0] timer_val_bo = 0,
+    output reg overflow = 0
 ); 
     reg [32:0] tmr;
     reg [32:0] tconf; 
@@ -35,9 +36,10 @@ module Timer #(parameter [12:0] ADDRESS = 'h0)(
     always@(posedge clk_i)
         if (en_i) begin
             if (rst_i) begin 
-                timer_val_bo <= 0;
-                tconf <= 0;
-                tmr <= 0;
+                timer_val_bo = 0;
+                tconf = 0;
+                tmr = 0;
+                overflow = 0;
             end else begin 
                 if (we_bi) begin 
                     if (addr_bi == ADDRESS) tmr <= wrdata_bi;
@@ -46,13 +48,21 @@ module Timer #(parameter [12:0] ADDRESS = 'h0)(
                 end
                 if (tconf & 'h2) begin
                     if (tconf & 'h1) begin
-                        timer_val_bo <= timer_val_bo - 1;
-                        if (timer_val_bo < 0)
+                        if (timer_val_bo == 0) begin
                             timer_val_bo = tmr;
+                            overflow = 1;
+                        end else begin
+                            timer_val_bo = timer_val_bo - 1;
+                            overflow = 0;
+                        end
                     end else begin
-                        timer_val_bo <= timer_val_bo + 1;
-                        if (timer_val_bo > tmr)
+                        if (timer_val_bo > tmr) begin
                             timer_val_bo = 0;
+                            overflow = 1;
+                        end else begin
+                            timer_val_bo = timer_val_bo + 1;
+                            overflow = 0;
+                        end
                     end
                 end
             end

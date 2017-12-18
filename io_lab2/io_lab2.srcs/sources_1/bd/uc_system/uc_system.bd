@@ -509,6 +509,16 @@
         <spirit:internalPortReference spirit:componentRef="axi_timer" spirit:portRef="generateout0"/>
         <spirit:externalPortReference spirit:portRef="generateout0"/>
       </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Timer_0_overflow</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="Timer_0" spirit:portRef="overflow"/>
+        <spirit:internalPortReference spirit:componentRef="Output_Compare_0" spirit:portRef="timer1_overflow"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Timer_1_overflow</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="Timer_1" spirit:portRef="overflow"/>
+        <spirit:internalPortReference spirit:componentRef="Output_Compare_0" spirit:portRef="timer2_overflow"/>
+      </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
       <spirit:hierConnection spirit:interfaceRef="gpio_rtl/axi_gpio_GPIO">

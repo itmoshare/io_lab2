@@ -535,3 +535,13 @@ mb-size test.elf  |tee "test.elf.size"
    2728	    268	   3108	   6104	   17d8	test.elf
 'Finished building: test.elf.size'
 ' '
+01:13:36 **** Auto Build of configuration Debug for project test_mb ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test_mb_bsp/microblaze_core/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:11:21: fatal error: xintc_l.h: No such file or directory
+ #include "xintc_l.h"
+                     ^
+compilation terminated.
+make: *** [src/main.o] Ошибка 1

@@ -10,9 +10,9 @@
 
 <MemInfoSimulation Version="1" Minor="0">
   <Processor Endianness="Little" InstPath="uc/uc_system_i/microblaze_core">
-    <AddressSpace Name="uc_uc_system_i_microblaze_core.uc_uc_system_i_microblaze_core_local_memory_lmb_bram_8K_41_ADDR_SPACE" ECC="NONE" Begin="0" End="8191">
+    <AddressSpace Name="uc_uc_system_i_microblaze_core.uc_uc_system_i_microblaze_core_local_memory_lmb_bram_8K_10_ADDR_SPACE" ECC="NONE" Begin="0" End="8191">
       <BusBlock>
-        <BitLane MemType="microblaze_core_local_memory_lmb_bram_8K_41_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="8191">
+        <BitLane MemType="microblaze_core_local_memory_lmb_bram_8K_10_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="8191">
           <DataWidth MSB="31" LSB="0"/>
           <AddressRange Begin="0" End="2047"/>
           <Parity ON="false" NumBits="0"/>

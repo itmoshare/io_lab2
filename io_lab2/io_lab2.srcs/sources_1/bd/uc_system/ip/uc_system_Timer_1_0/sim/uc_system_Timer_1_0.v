@@ -61,7 +61,8 @@ module uc_system_Timer_1_0 (
   en_i,
   we_bi,
   rddata_bo,
-  timer_val_bo
+  timer_val_bo,
+  overflow
 );
 
 input wire clk_i;
@@ -72,6 +73,7 @@ input wire en_i;
 input wire [3 : 0] we_bi;
 output wire [31 : 0] rddata_bo;
 output wire [15 : 0] timer_val_bo;
+output wire overflow;
 
   Timer #(
     .ADDRESS(32'H0000000C)
@@ -83,6 +85,7 @@ output wire [15 : 0] timer_val_bo;
     .en_i(en_i),
     .we_bi(we_bi),
     .rddata_bo(rddata_bo),
-    .timer_val_bo(timer_val_bo)
+    .timer_val_bo(timer_val_bo),
+    .overflow(overflow)
   );
 endmodule

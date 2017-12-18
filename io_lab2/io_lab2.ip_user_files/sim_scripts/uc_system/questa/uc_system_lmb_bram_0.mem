@@ -3,12 +3,12 @@
 // SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 // Vivado v2017.2 (64-bit)
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-// Created on Monday December 18, 2017 - 12:24:02 am, from:
+// Created on Monday December 18, 2017 - 02:40:53 pm, from:
 //
 //     Map file     - D:\projects\itmo\io_lab2\io_lab2\io_lab2.srcs\sources_1\bd\uc_system\uc_system.bmm
 //     Data file(s) - D:/projects/itmo/io_lab2/io_lab2/io_lab2.sdk/test/Debug/test.elf
 //
-// Address space 'uc_uc_system_i_microblaze_core.uc_uc_system_i_microblaze_core_local_memory_lmb_bram_8K_20_ADDR_SPACE', bit lane [31:0].
+// Address space 'uc_uc_system_i_microblaze_core.uc_uc_system_i_microblaze_core_local_memory_lmb_bram_8K_10_ADDR_SPACE', bit lane [31:0].
 //
 // Bus width = 32 bits, number of bus blocks = 1.
 
@@ -75,7 +75,7 @@
     80000000 3021FFEC FA610010 12610000 F8B30008 F8D3000C E8730008 F8730004
     E8730004 E893000C F8830000 80000000 10330000 EA610010 30210014 B60F0008
     80000000 3021FFE0 F9E10000 FA61001C 12610000 B0000000 B9F4013C 80000000
-    30C001F4 B000C000 30A00018 B000FFFF B9F4FF94 80000000 30C00004 B000C000
+    30C00004 B000C000 30A00018 B000FFFF B9F4FF94 80000000 30C001F4 B000C000
     30A0001C B000FFFF B9F4FF7C 80000000 30C003E8 B000C000 30A00000 B000FFFF
     B9F4FF64 80000000 30C00002 B000C000 30A00008 B000FFFF B9F4FF4C 80000000
     B0000000 B9F40114 80000000 10600000 E9E10000 10330000 EA61001C 30210020

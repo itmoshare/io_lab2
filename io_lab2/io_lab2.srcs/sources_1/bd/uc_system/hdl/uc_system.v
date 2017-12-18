@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Mon Dec 18 01:10:24 2017
+//Date        : Mon Dec 18 14:40:20 2017
 //Host        : DESKTOP-3JQ772D running 64-bit major release  (build 9200)
 //Command     : generate_target uc_system.bd
 //Design      : uc_system
@@ -1087,8 +1087,10 @@ module uc_system
   wire [31:0]BRAM_Interconnect_0_s3_wrdata_bo;
   wire Output_Compare_0_outs;
   wire [31:0]Output_Compare_0_rddata_bo;
+  wire Timer_0_overflow;
   wire [31:0]Timer_0_rddata_bo;
   wire [15:0]Timer_0_timer_val_bo;
+  wire Timer_1_overflow;
   wire [31:0]Timer_1_rddata_bo;
   wire [15:0]Timer_1_timer_val_bo;
   wire [12:0]axi_bram_ctrl_0_bram_addr_a;
@@ -1268,7 +1270,9 @@ module uc_system
         .outs(Output_Compare_0_outs),
         .rddata_bo(Output_Compare_0_rddata_bo),
         .rst_i(axi_bram_ctrl_0_bram_rst_a),
+        .timer1_overflow(Timer_0_overflow),
         .timer1_val_bi(Timer_0_timer_val_bo),
+        .timer2_overflow(Timer_1_overflow),
         .timer2_val_bi(Timer_1_timer_val_bo),
         .we_bi(BRAM_Interconnect_0_s1_we_bo),
         .wrdata_bi(BRAM_Interconnect_0_s1_wrdata_bo));
@@ -1276,6 +1280,7 @@ module uc_system
        (.addr_bi(BRAM_Interconnect_0_s2_addr_bo),
         .clk_i(axi_bram_ctrl_0_bram_clk_a),
         .en_i(BRAM_Interconnect_0_s2_en_o),
+        .overflow(Timer_0_overflow),
         .rddata_bo(Timer_0_rddata_bo),
         .rst_i(axi_bram_ctrl_0_bram_rst_a),
         .timer_val_bo(Timer_0_timer_val_bo),
@@ -1285,6 +1290,7 @@ module uc_system
        (.addr_bi(BRAM_Interconnect_0_s3_addr_bo),
         .clk_i(axi_bram_ctrl_0_bram_clk_a),
         .en_i(BRAM_Interconnect_0_s3_en_o),
+        .overflow(Timer_1_overflow),
         .rddata_bo(Timer_1_rddata_bo),
         .rst_i(axi_bram_ctrl_0_bram_rst_a),
         .timer_val_bo(Timer_1_timer_val_bo),

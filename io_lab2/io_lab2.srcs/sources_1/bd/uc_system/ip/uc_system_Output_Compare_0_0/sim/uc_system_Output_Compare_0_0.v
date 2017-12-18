@@ -61,7 +61,9 @@ module uc_system_Output_Compare_0_0 (
   en_i,
   we_bi,
   timer1_val_bi,
+  timer1_overflow,
   timer2_val_bi,
+  timer2_overflow,
   rddata_bo,
   outs
 );
@@ -73,7 +75,9 @@ input wire [31 : 0] wrdata_bi;
 input wire en_i;
 input wire [3 : 0] we_bi;
 input wire [15 : 0] timer1_val_bi;
+input wire timer1_overflow;
 input wire [15 : 0] timer2_val_bi;
+input wire timer2_overflow;
 output wire [31 : 0] rddata_bo;
 output wire outs;
 
@@ -87,7 +91,9 @@ output wire outs;
     .en_i(en_i),
     .we_bi(we_bi),
     .timer1_val_bi(timer1_val_bi),
+    .timer1_overflow(timer1_overflow),
     .timer2_val_bi(timer2_val_bi),
+    .timer2_overflow(timer2_overflow),
     .rddata_bo(rddata_bo),
     .outs(outs)
   );

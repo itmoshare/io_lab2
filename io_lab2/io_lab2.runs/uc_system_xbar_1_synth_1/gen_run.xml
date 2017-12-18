@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="uc_system_xbar_1_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1513094536">
-  <File Type="RDS-PROPCONSTRS" Name="uc_system_xbar_1_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="uc_system_xbar_1.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="uc_system_xbar_1_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="uc_system_xbar_1.vds"/>
   <File Type="RDS-UTIL" Name="uc_system_xbar_1_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="uc_system_xbar_1_utilization_synth.pb"/>

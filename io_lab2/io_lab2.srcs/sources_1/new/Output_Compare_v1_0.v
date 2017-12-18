@@ -28,7 +28,9 @@ module Output_Compare
     input en_i, 
     input [3:0] we_bi,
     input [15:0] timer1_val_bi,
+    input timer1_overflow,
     input [15:0] timer2_val_bi,
+    input timer2_overflow,
     output reg [31:0] rddata_bo = 0,
     output reg outs = 0
     );
@@ -39,6 +41,7 @@ module Output_Compare
     reg [31:0] last_mode;
     reg [31:0] mode;
     reg [31:0] timer;
+    reg overflow;
     
     always@(posedge clk_i)
         if (en_i) begin
@@ -57,6 +60,7 @@ module Output_Compare
                 end else begin
                     mode <= occonf & 'h7;
                     timer <= occonf & 'h8 == 0 ? timer2_val_bi : timer1_val_bi;
+                    overflow <= occonf & 'h8 == 0 ? timer2_overflow : timer1_overflow;
                     if (mode == 1) begin
                         if (last_mode != mode) outs <= 0;
                         if (timer == ocr) outs <= 1;
@@ -72,7 +76,7 @@ module Output_Compare
                     if (mode == 4) begin
                         if (last_mode != mode) outs <= 0;
                         if (timer == ocr) outs <= 1;
-                        if (timer > ocr) outs <= 0;
+                        if (overflow) outs <= 0;
                     end
                     if (mode == 5) begin
                         if (last_mode != mode) outs <= 1;

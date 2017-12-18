@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
+#include "xintc_l.h"
 
 #define TIMER_ADDRESS 0x41C00000
 #define GPIO_ADDRESS  0x40000000
