@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Mon Dec 18 14:41:14 2017
-// Host        : DESKTOP-3JQ772D running 64-bit major release  (build 9200)
+// Date        : Tue Dec 19 10:57:52 2017
+// Host        : DESKTOP-HMCOU6U running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_Timer_0_1/uc_system_Timer_0_1_sim_netlist.v
+//               C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_Timer_0_1/uc_system_Timer_0_1_sim_netlist.v
 // Design      : uc_system_Timer_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

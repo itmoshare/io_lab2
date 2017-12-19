@@ -1,4 +1,4 @@
-01:13:36 **** Auto Build of configuration Debug for project test_mb ****
+22:22:28 **** Auto Build of configuration Debug for project test_mb ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -7,7 +7,7 @@ mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test_mb_bsp/m
  #include "xintc_l.h"
                      ^
 compilation terminated.
-make: *** [src/main.o] Ô€…¬À¡ 1
+make: *** [src/main.o] Œ¯Ë·Í‡ 1
 
-01:13:37 Build Finished (took 1s.532ms)
+22:22:33 Build Finished (took 4s.565ms)
 

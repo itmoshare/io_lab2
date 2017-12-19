@@ -42,18 +42,18 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_param xicom.use_bs_reader 1
   open_checkpoint uc_system_wrapper_routed.dcp
-  set_property webtalk.parent_dir D:/projects/itmo/io_lab2/io_lab2/io_lab2.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.cache/wt [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files d:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_microblaze_0_0/data/mb_bootloop_le.elf
-  set_property SCOPED_TO_REF uc_system [get_files -all d:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_microblaze_0_0/data/mb_bootloop_le.elf]
-  set_property SCOPED_TO_CELLS microblaze_core [get_files -all d:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_microblaze_0_0/data/mb_bootloop_le.elf]
+  add_files C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.sdk/test/Debug/test.elf
+  set_property SCOPED_TO_REF uc_system [get_files -all C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.sdk/test/Debug/test.elf]
+  set_property SCOPED_TO_CELLS microblaze_core [get_files -all C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.sdk/test/Debug/test.elf]
   catch { write_mem_info -force uc_system_wrapper.mmi }
   catch { write_bmm -force uc_system_wrapper_bd.bmm }
   write_bitstream -force uc_system_wrapper.bit 

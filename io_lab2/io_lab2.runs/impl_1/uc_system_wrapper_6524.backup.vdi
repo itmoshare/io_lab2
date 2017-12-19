@@ -1,0 +1,585 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Dec 19 12:16:23 2017
+# Process ID: 6524
+# Current directory: C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.runs/impl_1
+# Command line: vivado.exe -log uc_system_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source uc_system_wrapper.tcl -notrace
+# Log file: C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.runs/impl_1/uc_system_wrapper.vdi
+# Journal file: C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source uc_system_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'uc_system_auto_pc_0' generated file not found 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_auto_pc_0/stats.txt'. Please regenerate to continue.
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 273.020 ; gain = 42.098
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_BRAM_Interconnect_0_0/uc_system_BRAM_Interconnect_0_0.dcp' for cell 'uc_system_i/BRAM_Interconnect_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_Output_Compare_0_0/uc_system_Output_Compare_0_0.dcp' for cell 'uc_system_i/Output_Compare_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_Timer_0_1/uc_system_Timer_0_1.dcp' for cell 'uc_system_i/Timer_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_Timer_1_0/uc_system_Timer_1_0.dcp' for cell 'uc_system_i/Timer_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_bram_ctrl_0_0/uc_system_axi_bram_ctrl_0_0.dcp' for cell 'uc_system_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0.dcp' for cell 'uc_system_i/axi_gpio'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_timer_0_0/uc_system_axi_timer_0_0.dcp' for cell 'uc_system_i/axi_timer'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0.dcp' for cell 'uc_system_i/axi_uartlite_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.dcp' for cell 'uc_system_i/clk_wiz'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_microblaze_0_0/uc_system_microblaze_0_0.dcp' for cell 'uc_system_i/microblaze_core'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_proc_sys_reset_0_0/uc_system_proc_sys_reset_0_0.dcp' for cell 'uc_system_i/rst_clk_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_xbar_1/uc_system_xbar_1.dcp' for cell 'uc_system_i/axi_interconnect/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_auto_pc_0/uc_system_auto_pc_0.dcp' for cell 'uc_system_i/axi_interconnect/m00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_bram_if_cntlr_0/uc_system_dlmb_bram_if_cntlr_0.dcp' for cell 'uc_system_i/microblaze_core_local_memory/dlmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_v10_0/uc_system_dlmb_v10_0.dcp' for cell 'uc_system_i/microblaze_core_local_memory/dlmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_bram_if_cntlr_0/uc_system_ilmb_bram_if_cntlr_0.dcp' for cell 'uc_system_i/microblaze_core_local_memory/ilmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_v10_0/uc_system_ilmb_v10_0.dcp' for cell 'uc_system_i/microblaze_core_local_memory/ilmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_lmb_bram_0/uc_system_lmb_bram_0.dcp' for cell 'uc_system_i/microblaze_core_local_memory/lmb_bram'
+INFO: [Netlist 29-17] Analyzing 191 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_microblaze_0_0/uc_system_microblaze_0_0.xdc] for cell 'uc_system_i/microblaze_core/U0'
+Finished Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_microblaze_0_0/uc_system_microblaze_0_0.xdc] for cell 'uc_system_i/microblaze_core/U0'
+Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_board.xdc] for cell 'uc_system_i/clk_wiz/inst'
+Finished Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0_board.xdc] for cell 'uc_system_i/clk_wiz/inst'
+Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.xdc] for cell 'uc_system_i/clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1111.672 ; gain = 520.406
+Finished Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.xdc] for cell 'uc_system_i/clk_wiz/inst'
+Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_proc_sys_reset_0_0/uc_system_proc_sys_reset_0_0_board.xdc] for cell 'uc_system_i/rst_clk_100M/U0'
+Finished Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_proc_sys_reset_0_0/uc_system_proc_sys_reset_0_0_board.xdc] for cell 'uc_system_i/rst_clk_100M/U0'
+Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_proc_sys_reset_0_0/uc_system_proc_sys_reset_0_0.xdc] for cell 'uc_system_i/rst_clk_100M/U0'
+Finished Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_proc_sys_reset_0_0/uc_system_proc_sys_reset_0_0.xdc] for cell 'uc_system_i/rst_clk_100M/U0'
+Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_timer_0_0/uc_system_axi_timer_0_0.xdc] for cell 'uc_system_i/axi_timer/U0'
+Finished Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_timer_0_0/uc_system_axi_timer_0_0.xdc] for cell 'uc_system_i/axi_timer/U0'
+Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0_board.xdc] for cell 'uc_system_i/axi_gpio/U0'
+Finished Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0_board.xdc] for cell 'uc_system_i/axi_gpio/U0'
+Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0.xdc] for cell 'uc_system_i/axi_gpio/U0'
+Finished Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0.xdc] for cell 'uc_system_i/axi_gpio/U0'
+Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_v10_0/uc_system_dlmb_v10_0.xdc] for cell 'uc_system_i/microblaze_core_local_memory/dlmb_v10/U0'
+Finished Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_dlmb_v10_0/uc_system_dlmb_v10_0.xdc] for cell 'uc_system_i/microblaze_core_local_memory/dlmb_v10/U0'
+Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_v10_0/uc_system_ilmb_v10_0.xdc] for cell 'uc_system_i/microblaze_core_local_memory/ilmb_v10/U0'
+Finished Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_ilmb_v10_0/uc_system_ilmb_v10_0.xdc] for cell 'uc_system_i/microblaze_core_local_memory/ilmb_v10/U0'
+Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0_board.xdc] for cell 'uc_system_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0_board.xdc] for cell 'uc_system_i/axi_uartlite_0/U0'
+Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0.xdc] for cell 'uc_system_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [c:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0.xdc] for cell 'uc_system_i/axi_uartlite_0/U0'
+Parsing XDC File [C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/constrs_1/new/constr.xdc]
+Finished Parsing XDC File [C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/constrs_1/new/constr.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'uc_system_wrapper'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.sdk/test/Debug/test.elf 
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 80 instances were transformed.
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 64 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
+
+link_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:45 . Memory (MB): peak = 1111.672 ; gain = 838.652
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+Command: report_drc (run_mandatory_drcs) for: opt_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1111.672 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 58 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: d74aa417
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.537 . Memory (MB): peak = 1117.383 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 44 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 9 inverter(s) to 19 load pin(s).
+Phase 2 Constant propagation | Checksum: 1857ae16a
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1117.383 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 193 cells and removed 472 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1359ad031
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1117.383 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 17 cells and removed 1027 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 1359ad031
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1117.383 ; gain = 0.000
+INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 1359ad031
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1117.383 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1117.383 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1359ad031
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1117.383 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 2 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 4
+Ending PowerOpt Patch Enables Task | Checksum: 12d9b33f4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1230.012 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 12d9b33f4
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1230.012 ; gain = 112.629
+50 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1230.012 ; gain = 118.340
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.105 . Memory (MB): peak = 1230.012 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.runs/impl_1/uc_system_wrapper_opt.dcp' has been generated.
+Command: report_drc -file uc_system_wrapper_drc_opted.rpt
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.runs/impl_1/uc_system_wrapper_drc_opted.rpt.
+report_drc completed successfully
+Command: power_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Begin power optimizations | Checksum: 12d9b33f4
+INFO: [Pwropt 34-50] Optimizing power for module uc_system_wrapper ...
+INFO: [Pwropt 34-207] Design is in partially-placed state. Running in partially-placed mode.
+Found 224 new always-off flops by back propagation
+Pre-processing: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.518 . Memory (MB): peak = 1240.516 ; gain = 10.504
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+PSMgr Creation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.882 . Memory (MB): peak = 1251.535 ; gain = 21.523
+Running Vector-less Activity Propagation...
+IDT: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.825 . Memory (MB): peak = 1284.824 ; gain = 44.309
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-215] Skipped ODC enables for 62 nets in BRAM flops in bus-based analysis.
+INFO: [Pwropt 34-214] Skipped ODC enables for 0 nets in BRAM address flops in bus-based analysis.
+ODC: Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1295.805 ; gain = 10.980
+Power optimization passes: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1296.805 ; gain = 66.793
+
+INFO: [Pwropt 34-77] Creating clock enable groups ...
+INFO: [Pwropt 34-96] Including small groups for filtering based on enable probabilities.
+ Done
+Grouping enables: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.729 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-26] Patching clock gating enable signals for design uc_system_wrapper ...
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 2 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+INFO: [Pwropt 34-100] Patcher adaptive clustering : original flop clusters 155 accepted clusters 155
+
+Number of Slice Registers augmented: 60 newly gated: 191 Total: 1418
+Number of SRLs augmented: 0  newly gated: 0 Total: 94
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 4
+Number of Flops added for Enable Generation: 0
+
+Flops dropped: 4/299 RAMS dropped: 0/0 Clusters dropped: 4/155 Enables dropped: 0
+Patching clock gating enables finished successfully.
+Ending PowerOpt Patch Enables Task | Checksum: 1803fb6e4
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1296.805 ; gain = 0.000
+INFO: [Pwropt 34-30] Power optimization finished successfully.
+End power optimizations | Checksum: 1803fb6e4
+Power optimization: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1296.805 ; gain = 66.793
+INFO: [Pwropt 34-198] Malloced memory gain at end of power optimization: 0 bytes
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 6 inverter(s) to 36 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1429ec2e4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.619 . Memory (MB): peak = 1296.805 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 BUFG optimization
+Phase 2 BUFG optimization | Checksum: 1429ec2e4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.790 . Memory (MB): peak = 1296.805 ; gain = 0.000
+INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
+
+Phase 3 Remap
+Phase 3 Remap | Checksum: b9c1aada
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1296.805 ; gain = 0.000
+INFO: [Opt 31-389] Phase Remap created 156 cells and removed 186 cells
+Ending Logic Optimization Task | Checksum: b9c1aada
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1296.805 ; gain = 0.000
+74 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+power_opt_design completed successfully
+power_opt_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 1296.805 ; gain = 66.793
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.134 . Memory (MB): peak = 1296.805 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.runs/impl_1/uc_system_wrapper_pwropt.dcp' has been generated.
+INFO: [Chipscope 16-241] No debug cores found in the current design.
+Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
+or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+Command: report_drc (run_mandatory_drcs) for: incr_eco_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+Command: report_drc (run_mandatory_drcs) for: placer_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1296.805 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 11b9b53f0
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1296.805 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e1ac044e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 182657af8
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 182657af8
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1296.805 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 182657af8
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 90b02ab5
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 90b02ab5
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1092e96e4
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 13a3b8f27
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: eefc7bb8
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 184c31a22
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1558569d8
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1f2ecbb6c
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 1f2ecbb6c
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1296.805 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1f2ecbb6c
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 19bee5c6d
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Place 46-41] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 19bee5c6d
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1296.805 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=2.777. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1e156bec6
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1296.805 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1e156bec6
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1e156bec6
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1e156bec6
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1296.805 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 1b66d34f7
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1296.805 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1b66d34f7
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1296.805 ; gain = 0.000
+Ending Placer Task | Checksum: 124423e93
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1296.805 ; gain = 0.000
+91 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1296.805 ; gain = 0.000
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.640 . Memory (MB): peak = 1296.805 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.runs/impl_1/uc_system_wrapper_placed.dcp' has been generated.
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 1296.805 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1296.805 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1296.805 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+Running DRC as a precondition to command route_design
+Command: report_drc (run_mandatory_drcs) for: router_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: cbeb09c9 ConstDB: 0 ShapeSum: 585734ca RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: e67767eb
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:39 . Memory (MB): peak = 1296.965 ; gain = 0.160
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: e67767eb
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:40 . Memory (MB): peak = 1296.965 ; gain = 0.160
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: e67767eb
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:40 . Memory (MB): peak = 1296.965 ; gain = 0.160
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: e67767eb
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:40 . Memory (MB): peak = 1296.965 ; gain = 0.160
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 11b5aeef3
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:41 . Memory (MB): peak = 1296.965 ; gain = 0.160
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.802  | TNS=0.000  | WHS=-0.192 | THS=-38.509|
+
+Phase 2 Router Initialization | Checksum: c1be753d
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:42 . Memory (MB): peak = 1296.965 ; gain = 0.160
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 195d7e474
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:42 . Memory (MB): peak = 1296.965 ; gain = 0.160
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 378
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.080  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1739b0a63
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 1296.965 ; gain = 0.160
+Phase 4 Rip-up And Reroute | Checksum: 1739b0a63
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 1296.965 ; gain = 0.160
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 12ad02d90
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 1296.965 ; gain = 0.160
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.159  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 12ad02d90
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:45 . Memory (MB): peak = 1296.965 ; gain = 0.160
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 12ad02d90
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:45 . Memory (MB): peak = 1296.965 ; gain = 0.160
+Phase 5 Delay and Skew Optimization | Checksum: 12ad02d90
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:45 . Memory (MB): peak = 1296.965 ; gain = 0.160
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 9fa5d79a
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:45 . Memory (MB): peak = 1296.965 ; gain = 0.160
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.159  | TNS=0.000  | WHS=0.065  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 13185cde4
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:45 . Memory (MB): peak = 1296.965 ; gain = 0.160
+Phase 6 Post Hold Fix | Checksum: 13185cde4
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:45 . Memory (MB): peak = 1296.965 ; gain = 0.160
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.550551 %
+  Global Horizontal Routing Utilization  = 0.627877 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 12a2ecb04
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:45 . Memory (MB): peak = 1296.965 ; gain = 0.160
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 12a2ecb04
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:45 . Memory (MB): peak = 1296.965 ; gain = 0.160
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 11ef60a43
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:45 . Memory (MB): peak = 1296.965 ; gain = 0.160
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=2.159  | TNS=0.000  | WHS=0.065  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 11ef60a43
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:45 . Memory (MB): peak = 1296.965 ; gain = 0.160
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:45 . Memory (MB): peak = 1296.965 ; gain = 0.160
+
+Routing Is Done.
+104 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:58 ; elapsed = 00:00:47 . Memory (MB): peak = 1296.965 ; gain = 0.160
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1296.965 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.runs/impl_1/uc_system_wrapper_routed.dcp' has been generated.
+Command: report_drc -file uc_system_wrapper_drc_routed.rpt -pb uc_system_wrapper_drc_routed.pb -rpx uc_system_wrapper_drc_routed.rpx
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.runs/impl_1/uc_system_wrapper_drc_routed.rpt.
+report_drc completed successfully
+Command: report_methodology -file uc_system_wrapper_methodology_drc_routed.rpt -rpx uc_system_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.runs/impl_1/uc_system_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+Command: report_power -file uc_system_wrapper_power_routed.rpt -pb uc_system_wrapper_power_summary_routed.pb -rpx uc_system_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+111 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 19 12:19:16 2017...

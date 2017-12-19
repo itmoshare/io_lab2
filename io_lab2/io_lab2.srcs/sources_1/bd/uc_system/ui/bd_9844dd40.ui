@@ -66,7 +66,7 @@ preplace netloc Timer_1_timer_val_bo 1 3 2 1830 70 2230
 preplace netloc Output_Compare_0_rddata_bo 1 1 4 840 -10 NJ -10 NJ -10 2210
 preplace netloc BRAM_Interconnect_0_rddara_bo 1 1 2 770J 740 1350
 preplace netloc reset_rtl_1 1 0 1 -30J
-levelinfo -pg 1 -50 520 1160 1620 2030 2280 -top -600 -bot 1220
+levelinfo -pg 1 -50 520 1160 1620 2030 2290 -top -600 -bot 1220
 ",
 }
 {

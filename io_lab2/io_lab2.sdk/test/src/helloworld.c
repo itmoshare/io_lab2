@@ -47,7 +47,6 @@
 
 #include <stdio.h>
 #include "platform.h"
-#include "xil_printf.h"
 #include "xil_io.h"
 
 
@@ -57,16 +56,26 @@
 #define MY_BASE_ADDRESS 0xC0000000
 
 u32 t_old = 0;
+int period;
 
 int main()
 {
     init_platform();
 
+//    char c[3];
+//
+//    c[0] = inbyte();
+//    c[1] = inbyte();
+//    c[2] = inbyte();
+
+    //period = (c[0] - '0') * 100 + (c[1] - '0') * 10 + (c[2] - '0');
+    period = 0x348;
+
 	// Output Compare start
     Xil_Out32(MY_BASE_ADDRESS + 0x18, 0x4);
-	Xil_Out32(MY_BASE_ADDRESS + 0x1C, 500);
+	Xil_Out32(MY_BASE_ADDRESS + 0x1C, period / 2);
 	// Timer 1 start
-	Xil_Out32(MY_BASE_ADDRESS + 0x0, 1000);
+	Xil_Out32(MY_BASE_ADDRESS + 0x0, period);
 	Xil_Out32(MY_BASE_ADDRESS + 0x8, 0x2);
 
 	// AXI Timer configuration
@@ -84,7 +93,7 @@ int main()
 			u32 t = Xil_In32(TIMER_ADDRESS + 0x04);
 
 			if (t_old != 0)
-				Xil_Out32(GPIO_ADDRESS, t - t_old);
+				Xil_Out32(GPIO_ADDRESS, t - t_old - 2);
 
 			t_old = t;
 
@@ -92,11 +101,6 @@ int main()
 			Xil_Out32(TIMER_ADDRESS, 0x199);
 		}
 	}
-
-    //print("N");
-    //char t = inbyte();
-    //char t = 0x55;
-    //outbyte(t);
 
     cleanup_platform();
     return 0;

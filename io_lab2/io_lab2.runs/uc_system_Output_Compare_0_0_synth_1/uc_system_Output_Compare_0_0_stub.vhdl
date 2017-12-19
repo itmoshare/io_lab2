@@ -1,8 +1,8 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Mon Dec 18 14:41:55 2017
--- Host        : DESKTOP-3JQ772D running 64-bit major release  (build 9200)
+-- Date        : Tue Dec 19 10:59:03 2017
+-- Host        : DESKTOP-HMCOU6U running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ uc_system_Output_Compare_0_0_stub.vhdl
 -- Design      : uc_system_Output_Compare_0_0

@@ -28,20 +28,20 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSANumComputeUnits" Val="16"/>
-    <Option Name="WTXSimLaunchSim" Val="315"/>
+    <Option Name="WTXSimLaunchSim" Val="321"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="25"/>
-    <Option Name="WTModelSimExportSim" Val="25"/>
-    <Option Name="WTQuestaExportSim" Val="25"/>
-    <Option Name="WTIesExportSim" Val="25"/>
-    <Option Name="WTVcsExportSim" Val="25"/>
-    <Option Name="WTRivieraExportSim" Val="25"/>
-    <Option Name="WTActivehdlExportSim" Val="25"/>
+    <Option Name="WTXSimExportSim" Val="33"/>
+    <Option Name="WTModelSimExportSim" Val="33"/>
+    <Option Name="WTQuestaExportSim" Val="33"/>
+    <Option Name="WTIesExportSim" Val="33"/>
+    <Option Name="WTVcsExportSim" Val="33"/>
+    <Option Name="WTRivieraExportSim" Val="33"/>
+    <Option Name="WTActivehdlExportSim" Val="33"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -78,11 +78,29 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_dlmb_v10_0/uc_system_dlmb_v10_0.xci">
-          <Proxy FileSetName="uc_system_dlmb_v10_0"/>
+        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0.xci">
+          <Proxy FileSetName="uc_system_axi_uartlite_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_BRAM_Interconnect_0_0/uc_system_BRAM_Interconnect_0_0.xci">
+          <Proxy FileSetName="uc_system_BRAM_Interconnect_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_Timer_0_1/uc_system_Timer_0_1.xci">
+          <Proxy FileSetName="uc_system_Timer_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_Output_Compare_0_0/uc_system_Output_Compare_0_0.xci">
+          <Proxy FileSetName="uc_system_Output_Compare_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_Timer_1_0/uc_system_Timer_1_0.xci">
+          <Proxy FileSetName="uc_system_Timer_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_axi_bram_ctrl_0_0/uc_system_axi_bram_ctrl_0_0.xci">
+          <Proxy FileSetName="uc_system_axi_bram_ctrl_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_dlmb_bram_if_cntlr_0/uc_system_dlmb_bram_if_cntlr_0.xci">
           <Proxy FileSetName="uc_system_dlmb_bram_if_cntlr_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0.xci">
+          <Proxy FileSetName="uc_system_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_ilmb_v10_0/uc_system_ilmb_v10_0.xci">
           <Proxy FileSetName="uc_system_ilmb_v10_0"/>
@@ -96,23 +114,8 @@
         <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_xbar_1/uc_system_xbar_1.xci">
           <Proxy FileSetName="uc_system_xbar_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_axi_bram_ctrl_0_0/uc_system_axi_bram_ctrl_0_0.xci">
-          <Proxy FileSetName="uc_system_axi_bram_ctrl_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_Timer_0_1/uc_system_Timer_0_1.xci">
-          <Proxy FileSetName="uc_system_Timer_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_axi_uartlite_0_0/uc_system_axi_uartlite_0_0.xci">
-          <Proxy FileSetName="uc_system_axi_uartlite_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_BRAM_Interconnect_0_0/uc_system_BRAM_Interconnect_0_0.xci">
-          <Proxy FileSetName="uc_system_BRAM_Interconnect_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_Timer_1_0/uc_system_Timer_1_0.xci">
-          <Proxy FileSetName="uc_system_Timer_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_Output_Compare_0_0/uc_system_Output_Compare_0_0.xci">
-          <Proxy FileSetName="uc_system_Output_Compare_0_0"/>
+        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_dlmb_v10_0/uc_system_dlmb_v10_0.xci">
+          <Proxy FileSetName="uc_system_dlmb_v10_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_clk_wiz_0_0/uc_system_clk_wiz_0_0.xci">
           <Proxy FileSetName="uc_system_clk_wiz_0_0"/>
@@ -120,14 +123,11 @@
         <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_proc_sys_reset_0_0/uc_system_proc_sys_reset_0_0.xci">
           <Proxy FileSetName="uc_system_proc_sys_reset_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_axi_timer_0_0/uc_system_axi_timer_0_0.xci">
-          <Proxy FileSetName="uc_system_axi_timer_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_axi_gpio_0_0/uc_system_axi_gpio_0_0.xci">
-          <Proxy FileSetName="uc_system_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_microblaze_0_0/uc_system_microblaze_0_0.xci">
           <Proxy FileSetName="uc_system_microblaze_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="uc_system.bd" FileRelPathName="ip/uc_system_axi_timer_0_0/uc_system_axi_timer_0_0.xci">
+          <Proxy FileSetName="uc_system_axi_timer_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/uc_system/hdl/uc_system_wrapper.v">
@@ -135,6 +135,14 @@
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSDKDIR/test/Debug/test.elf">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="ScopedToRef" Val="uc_system"/>
+          <Attr Name="ScopedToCell" Val="microblaze_core"/>
+          <Attr Name="IsVisible" Val="1"/>
         </FileInfo>
       </File>
       <Config>
@@ -454,9 +462,7 @@
     </Run>
     <Run Id="uc_system_Timer_0_1_synth_1" Type="Ft3:Synth" SrcSet="uc_system_Timer_0_1" Part="xc7a100tcsg324-1" ConstrsSet="uc_system_Timer_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/uc_system_Timer_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -465,9 +471,7 @@
     </Run>
     <Run Id="uc_system_Timer_1_0_synth_1" Type="Ft3:Synth" SrcSet="uc_system_Timer_1_0" Part="xc7a100tcsg324-1" ConstrsSet="uc_system_Timer_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/uc_system_Timer_1_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -476,9 +480,7 @@
     </Run>
     <Run Id="uc_system_Output_Compare_0_0_synth_1" Type="Ft3:Synth" SrcSet="uc_system_Output_Compare_0_0" Part="xc7a100tcsg324-1" ConstrsSet="uc_system_Output_Compare_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/uc_system_Output_Compare_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -728,9 +730,7 @@
     </Run>
     <Run Id="uc_system_Timer_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="uc_system_Timer_0_1" Description="Default settings for Implementation." SynthRun="uc_system_Timer_0_1_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -746,9 +746,7 @@
     </Run>
     <Run Id="uc_system_Timer_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="uc_system_Timer_1_0" Description="Default settings for Implementation." SynthRun="uc_system_Timer_1_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -764,9 +762,7 @@
     </Run>
     <Run Id="uc_system_Output_Compare_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="uc_system_Output_Compare_0_0" Description="Default settings for Implementation." SynthRun="uc_system_Output_Compare_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

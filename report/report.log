@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.13)  13 DEC 2017 13:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.13)  19 DEC 2017 23:28
 entering extended mode
 **./report.tex
 (report.tex
@@ -774,42 +774,70 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [1]
-<scheme.png, id=19, 1299.35437pt x 718.93594pt>
+<scheme.png, id=15, 1284.29813pt x 721.94719pt>
 File: scheme.png Graphic file (type png)
 <use scheme.png>
 Package pdftex.def Info: scheme.png  used on input line 86. on input line 86.
-Package pdftex.def Info: Requested size: 483.69687pt x 267.6257pt on input line
- 86.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 92.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 92.
- [2 <./scheme.png>] [3] (report.aux) ) 
+Package pdftex.def Info: Requested size: 483.69687pt x 271.89722pt on input lin
+e 86.
+<block_scheme.png, id=16, 412.54124pt x 490.08093pt>
+File: block_scheme.png Graphic file (type png)
+<use block_scheme.png>
+Package pdftex.def Info: block_scheme.png  used on input line 89. on input line
+ 89.
+Package pdftex.def Info: Requested size: 412.54024pt x 490.07974pt on input lin
+e 89.
+
+
+Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
+ Make it at least 15.04742pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2 <./scheme.png>]
+<test1.png, id=20, 469.00218pt x 134.00063pt>
+File: test1.png Graphic file (type png)
+<use test1.png>
+Package pdftex.def Info: test1.png  used on input line 93. on input line 93.
+Package pdftex.def Info: Requested size: 469.00104pt x 134.00027pt on input lin
+e 93.
+
+
+Package Fancyhdr Warning: \headheight is too small (15.04742pt): 
+ Make it at least 27.11469pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3 <./block_scheme.png>]
+<test2.png, id=24, 423.08063pt x 112.16907pt>
+File: test2.png Graphic file (type png)
+<use test2.png>
+Package pdftex.def Info: test2.png  used on input line 95. on input line 95.
+Package pdftex.def Info: Requested size: 423.07959pt x 112.16878pt on input lin
+e 95.
+ [4 <./test1.png> <./test2.png>] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 3614 strings out of 493312
- 45677 string characters out of 3138892
+ 3624 strings out of 493312
+ 45823 string characters out of 3138892
  115702 words of memory out of 3000000
- 7094 multiletter control sequences out of 15000+200000
- 14939 words of font info for 36 fonts, out of 3000000 for 9000
+ 7101 multiletter control sequences out of 15000+200000
+ 14026 words of font info for 33 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,43p,816b,501s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Dmitriy\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1440.pk> <C:\Users\Dmitriy\AppData\Loca
-l\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk> <C:\Users\Dmitriy\Ap
-pData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1728.pk> <C:\Users\
-Dmitriy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lasl1200.pk> 
-<C:\Users\Dmitriy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lar
-m1200.pk> <C:\Users\Dmitriy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\
-dpi600\lacc1095.pk> <C:\Users\Dmitriy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-lh\lh-t2a\dpi600\lacc1440.pk> <C:\Users\Dmitriy\AppData\Local\MiKTeX\2.9\fonts\
-pk\ljfour\lh\lh-t2a\dpi600\larm1440.pk><D:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.p
-fb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report.pdf (4 pages, 233191 bytes).
+ 41i,10n,43p,816b,438s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Dmitriy\AppData\Local
+\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1440.pk> <C:\Users\Dmitriy\App
+Data\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk> <C:\Users\D
+mitriy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1728.pk> <
+C:\Users\Dmitriy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lasl
+1200.pk> <C:\Users\Dmitriy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\d
+pi600\larm1200.pk> <C:\Users\Dmitriy\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\l
+h\lh-t2a\dpi600\lacc1095.pk> <C:\Users\Dmitriy\AppData\Local\MiKTeX\2.9\fonts\p
+k\ljfour\lh\lh-t2a\dpi600\lacc1440.pk> <C:\Users\Dmitriy\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm1440.pk><D:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on report.pdf (5 pages, 250675 bytes).
 PDF statistics:
- 318 PDF objects out of 1000 (max. 8388607)
+ 343 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

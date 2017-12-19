@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Sat Dec 16 15:38:39 2017
-// Host        : DESKTOP-3JQ772D running 64-bit major release  (build 9200)
+// Date        : Tue Dec 19 10:57:51 2017
+// Host        : DESKTOP-HMCOU6U running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               D:/projects/itmo/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_BRAM_Interconnect_0_0/uc_system_BRAM_Interconnect_0_0_stub.v
+//               C:/Users/Laptop/Documents/projects/io_lab2/io_lab2/io_lab2.srcs/sources_1/bd/uc_system/ip/uc_system_BRAM_Interconnect_0_0/uc_system_BRAM_Interconnect_0_0_stub.v
 // Design      : uc_system_BRAM_Interconnect_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1

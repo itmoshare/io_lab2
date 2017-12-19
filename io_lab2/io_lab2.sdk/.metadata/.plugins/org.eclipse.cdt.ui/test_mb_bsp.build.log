@@ -1,4 +1,4 @@
-13:38:59 **** Auto Build of project test_mb_bsp ****
+11:11:06 **** Auto Build of project test_mb_bsp ****
 make -k all 
 "Running Make include in microblaze_core/libsrc/bram_v4_1/src"
 make -C microblaze_core/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -35,5 +35,5 @@ make -C microblaze_core/libsrc/tmrctr_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb
 "Compiling tmrctr"
 'Finished building libraries'
 
-13:39:41 Build Finished (took 41s.657ms)
+11:12:04 Build Finished (took 58s.265ms)
 
